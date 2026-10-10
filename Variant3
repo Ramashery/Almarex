@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMAREX AVIATION VENTURES FZCO | International Aviation Business Platform, Dubai</title>
+<meta name="description" content="ALMAREX AVIATION VENTURES FZCO — Dubai-based international aviation business platform: airline representation, aircraft &amp; fleet solutions, charter, cargo, advisory and investment.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALMAREX AVIATION VENTURES FZCO">
+<meta property="og:title" content="ALMAREX — Where Aviation Connects the World">
+<meta property="og:description" content="Dubai-based international aviation business platform. Airline representation, aircraft &amp; fleet solutions, charter, cargo, advisory and investment.">
+<meta property="og:image" content="https://i.postimg.cc/Y9kDdLZd/dubai.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F4EC;
+    --bg-soft:#EFEAE0;
+    --surface:#FFFFFF;
+    --navy:#101C2C;
+    --navy-2:#1B2E44;
+    --teal:#2E5F5A;
+    --bronze:#A9814C;
+    --ink:#1B2430;
+    --ink-soft:#5B6472;
+    --line:#DAD3C2;
+    --line-dark:rgba(255,255,255,.18);
+    --max:1220px;
+    --gutter:clamp(24px, 5vw, 64px);
+    --rail-x: 6px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{
+    margin:0;
+    overflow-x:clip;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3{margin:0;font-family:'Fraunces', serif;font-weight:500;color:var(--navy);letter-spacing:-0.01em;}
+  h1 em, h2 em, h3 em, p em{font-style:italic;font-weight:400;color:var(--teal);}
+  p{margin:0;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
+
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:18px;
+  }
+  .eyebrow .code{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:auto;
+    padding:2px 8px;
+    border:1px solid var(--teal);
+    border-radius:20px;
+    color:var(--teal);
+    font-size:.68rem;
+  }
+  .eyebrow.on-dark{color:#CFE3D8;}
+  .eyebrow.on-dark .code{border-color:#CFE3D8;color:#CFE3D8;}
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:22px var(--gutter);
+    display:flex;align-items:center;justify-content:flex-end;
+    gap:clamp(18px, 3vw, 40px);
+    background:transparent;
+    box-shadow:none;
+    transition:background .5s ease, box-shadow .5s ease, padding .3s ease;
+  }
+  .site-header.scrolled{
+    background:transparent;
+    backdrop-filter:none;
+    box-shadow:none;
+    padding-top:22px;padding-bottom:22px;
+  }
+
+  .nav-links{display:flex;align-items:center;gap:clamp(18px, 2.4vw, 34px);}
+  .nav-links a{
+    font-size:.88rem;font-weight:600;color:#F7F4EC;
+    position:relative;padding-bottom:4px;
+    white-space:nowrap;
+    transition:color .3s ease;
+  }
+  .site-header.on-light .nav-links a{color:var(--navy);}
+  .nav-links a::after{
+    content:'';position:absolute;left:0;bottom:0;height:1px;width:0;
+    background:currentColor;transition:width .3s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+
+  .header-right{display:flex;align-items:center;gap:clamp(14px, 2vw, 26px);flex:none;}
+  .header-utility{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:#F7F4EC;
+    white-space:nowrap;
+    transition:color .3s ease;
+  }
+  .site-header.on-light .header-utility{color:var(--ink-soft);}
+
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:110;flex:none;}
+  .menu-toggle span{display:block;width:24px;height:2px;margin:5px 0;background:#F7F4EC;transition:.3s;}
+  .site-header.on-light .menu-toggle span{background:var(--navy);}
+  .menu-toggle.open span{background:#F7F4EC !important;}
+  .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* Overlay backdrop behind the sliding mobile panel */
+  .mobile-nav-backdrop{
+    position:fixed;inset:0;z-index:104;
+    background:rgba(16,28,44,.4);
+    opacity:0;visibility:hidden;
+    transition:opacity .5s ease, visibility .5s ease;
+  }
+  .mobile-nav-backdrop.open{opacity:1;visibility:visible;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:flex-end;
+    overflow:hidden;
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    isolation:isolate;
+  }
+  .hero-video-wrap{position:absolute;inset:0;z-index:0;}
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(16,28,44,.55) 0%, rgba(27,46,68,.32) 38%, rgba(16,28,44,.85) 100%);
+  }
+  .scroll-cue{
+    position:absolute;right:var(--gutter);bottom:34px;z-index:2;
+    display:flex;align-items:center;gap:10px;
+    color:rgba(247,244,236,.7);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+    opacity:0;
+    animation:riseIn 1s ease forwards;
+    animation-delay:1.3s;
+  }
+  .scroll-cue .stick{width:1px;height:34px;background:rgba(247,244,236,.5);position:relative;overflow:hidden;}
+  .scroll-cue .stick::after{
+    content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#F7F4EC;
+    animation:stickMove 2.2s ease-in-out infinite;
+  }
+  @keyframes stickMove{0%{top:-100%;}50%{top:100%;}100%{top:100%;}}
+
+  .block{position:relative;z-index:1;padding-top:96px;padding-bottom:96px;}
+  .block + .block{border-top:1px solid var(--line);}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-delay-1{transition-delay:.08s;}
+  .reveal-delay-2{transition-delay:.16s;}
+  .reveal-delay-3{transition-delay:.24s;}
+  .reveal-delay-4{transition-delay:.32s;}
+  .reveal-delay-5{transition-delay:.4s;}
+  .reveal-delay-6{transition-delay:.48s;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#F7F4EC;
+    padding:110px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .final-cta::before{
+    content:'';position:absolute;top:-40%;right:-10%;width:520px;height:520px;
+    border:1px solid rgba(247,244,236,.08);border-radius:50%;
+  }
+  .final-cta::after{
+    content:'';position:absolute;top:-20%;right:6%;width:340px;height:340px;
+    border:1px solid rgba(247,244,236,.08);border-radius:50%;
+  }
+  .final-cta-inner{max-width:640px;position:relative;z-index:1;}
+  .final-cta h2{color:#F7F4EC;font-size:clamp(2rem, 4vw, 3.1rem);line-height:1.15;}
+  .final-cta p{margin-top:22px;color:rgba(247,244,236,.78);font-size:1.05rem;}
+  .final-cta .hero-ctas{margin-top:36px;opacity:1;animation:none;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    padding:90px 0 30px;
+  }
+  .footer-video-wrap{position:absolute;inset:0;z-index:0;}
+  .footer-video-wrap video{
+    position:absolute;top:50%;left:50%;
+    min-width:100%;min-height:100%;width:auto;height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1.2s ease-in-out;
+  }
+  .footer-video-wrap video.bg-video-active{opacity:1;}
+  .footer-overlay{
+    position:absolute;inset:0;z-index:0;
+    background:transparent;
+  }
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(247,244,236,.16);}
+  .footer-brand p{margin-top:18px;color:rgba(247,244,236,.72);font-size:.95rem;max-width:320px;}
+  .footer-logo img{height:24px;filter:brightness(0) invert(1);}
+  .footer-col h4{
+    font-family:'IBM Plex Mono', monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+    color:rgba(247,244,236,.55);margin-bottom:18px;font-weight:500;
+  }
+  .footer-col li{padding:6px 0;}
+  .footer-col a{font-size:.92rem;color:#F7F4EC;transition:color .3s ease;}
+  .footer-col a:hover{color:var(--bronze);}
+  .footer-bottom{
+    padding-top:24px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:.8rem;color:rgba(247,244,236,.55);
+  }
+  .footer-bottom nav{display:flex;gap:22px;flex-wrap:wrap;}
+  .footer-bottom a:hover{color:var(--bronze);}
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;}
+
+  /* ---------- Responsive ---------- */
+
+  /* Sliding right-side panel — base rules apply from the point the
+     hamburger takes over, so the panel is ready before layout narrows further. */
+  .mobile-nav{
+    position:fixed;top:0;right:0;bottom:0;z-index:106;
+    width:min(84vw, 380px);
+    background:rgba(16,28,44,.94);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    display:flex;flex-direction:column;justify-content:center;gap:0;
+    padding:0 40px;
+    box-shadow:-8px 0 40px rgba(16,28,44,.25);
+    transform:translateX(100%);
+    transition:transform .55s cubic-bezier(.22,.61,.36,1);
+  }
+  .mobile-nav.open{transform:translateX(0);}
+  .mobile-nav a{
+    font-family:'Fraunces', serif;font-size:1.7rem;color:#F7F4EC;
+    padding:13px 0;border-bottom:1px solid rgba(247,244,236,.14);
+  }
+  .mobile-nav .btn{margin-top:28px;align-self:flex-start;}
+
+  @media (max-width:1180px){
+    .nav-links{gap:16px;}
+    .nav-links a{font-size:.82rem;}
+    .header-utility{display:none;}
+  }
+
+  @media (max-width:1024px){
+    .pillars-grid{grid-template-columns:1fr;background:transparent;border:none;gap:0;}
+    .pillar{padding:32px 0;}
+    .pillar + .pillar{border-top:1px solid var(--line);}
+    .cap-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:1fr;gap:36px;}
+    .bridge-grid{grid-template-columns:1fr;}
+    .bridge-map{height:300px;}
+    .news-grid{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+
+  @media (max-width:900px){
+    :root{--gutter:24px;}
+  }
+
+  @media (max-width:840px){
+    .nav-links{display:none;}
+    .header-right .btn{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  @media (max-width:760px){
+    .scroll-cue{display:none;}
+    .block .eyebrow .code{left:0;}
+    .block{padding-top:64px;padding-bottom:64px;}
+    .bridge-map{height:220px;}
+    .cap-grid{grid-template-columns:1fr;}
+    .who-list{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;gap:36px;}
+    .final-cta{padding:80px 0;}
+
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+    .scroll-cue{opacity:1;transform:none;}
+  }
+
+  /* ================= v2 ================= */
+  :root{--ez:cubic-bezier(.22,.61,.36,1);--hh:150px}
+  html.intro,html.intro body{overflow:hidden}
+  body{overflow-x:clip}
+  html{scroll-padding-top:64px}
+  .rail-wrap{position:relative}
+
+  /* Header */
+  .site-header{height:var(--hh);padding:0 var(--gutter);transition:background .4s,box-shadow .4s,height .9s var(--ez),opacity .8s}
+  body.scrolled .site-header{height:64px}
+  .site-header.on-light{background:rgba(247,244,236,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+  body:not(.logo-done) .site-header,body:not(.logo-done) .wa{opacity:0;pointer-events:none}
+  .hl{font-size:.88rem;font-weight:600;color:#F7F4EC;transition:color .3s}
+  .site-header.on-light .hl{color:var(--navy)}
+  .hl:hover{color:var(--bronze)!important}
+
+  /* Logo: centred intro -> top-left -> compact on scroll (single element, fixed in header) */
+  .brand-logo{position:fixed;z-index:101;display:block;top:50%;left:50%;
+    width:var(--w-intro,80vw);aspect-ratio:var(--la,3);transform:translate(-50%,-50%);
+    animation:logoIn 1s ease both;
+    transition:top .9s var(--ez),left .9s var(--ez),transform .9s var(--ez),width .9s var(--ez)}
+  @keyframes logoIn{from{opacity:0}to{opacity:1}}
+  body.logo-done .brand-logo{top:calc(var(--hh)/2);left:var(--gutter);transform:translate(0,-50%);width:var(--w-hero)}
+  body.logo-done.scrolled .brand-logo{top:32px;width:var(--w-sm)}
+  .brand-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .4s}
+  .brand-logo .ll{filter:drop-shadow(0 1px 8px rgba(0,0,0,.35))}
+  .brand-logo .ld{opacity:0}
+  body.on-light .brand-logo .ld{opacity:1}
+  body.on-light .brand-logo .ll{opacity:0}
+
+  /* Hero: exactly one screen */
+  .hero{height:100vh;height:100dvh;min-height:0}
+  .scroll-cue{animation-delay:1.4s}
+  body:not(.logo-done) .scroll-cue{animation-play-state:paused}
+
+  /* Contact */
+  .final-cta-inner{max-width:none}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .cm{margin-top:30px}
+  .cm li{padding:13px 0;border-top:1px solid rgba(247,244,236,.16);display:flex;justify-content:space-between;gap:16px;font-size:.98rem}
+  .cm li:last-child{border-bottom:1px solid rgba(247,244,236,.16)}
+  .cm span{color:rgba(247,244,236,.55);font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding-top:3px}
+  .cm a:hover{color:var(--bronze)}
+  .legal{margin-top:22px;font-size:.82rem;color:rgba(247,244,236,.6);line-height:1.7}
+  .cform input,.cform textarea{width:100%;background:none;border:0;border-bottom:1px solid rgba(247,244,236,.35);border-radius:0;color:#F7F4EC;font:inherit;padding:12px 0;margin-bottom:12px;outline:0;resize:vertical}
+  .cform input:focus,.cform textarea:focus{border-color:var(--bronze)}
+  .cform ::placeholder{color:rgba(247,244,236,.5)}
+  .pill{margin-top:14px;border:0;border-radius:999px;padding:14px 30px;background:#F7F4EC;color:var(--navy);font-weight:700;font-size:.92rem;cursor:pointer;transition:background .3s}
+  .pill:hover{background:var(--bronze)}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px}}
+  .footer-col li{overflow-wrap:anywhere}
+
+  /* WhatsApp */
+  .wa{position:fixed;right:18px;bottom:18px;z-index:99;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.28);transition:transform .3s,opacity .8s}
+  .wa:hover{transform:scale(1.08)}
+  .wa svg{width:28px;height:28px}
+  @media (max-width:840px){.hl{display:none}}
+  .mobile-nav .ml{font-size:1.1rem;font-family:'Manrope',sans-serif}
+
+  /* ================= v3: hero = vertical warp slider + pinned text scenes ================= */
+  /* Slide layers: same two-layer warp as tpl_services (.sv-slide / .sv-slide-video), one pair per slide */
+  .hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hs{position:absolute;inset:0;overflow:hidden;z-index:0;--hs-oy:0%;
+    transform:translateY(var(--hs-oy));transition:transform 1.75s cubic-bezier(.19,1,.22,1);will-change:transform}
+  .hs.is-active{z-index:2}
+  .hs.is-instant,.hs.is-instant .hs-v{transition:none!important}
+  .hs-v{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;object-fit:cover;
+    --hs-iy:0%;--hs-sx:1;--hs-sy:1;--hs-rot:0deg;--hs-op:0;
+    transform:translate(-50%,-50%) translateY(var(--hs-iy)) scale(var(--hs-sx),var(--hs-sy)) rotate(var(--hs-rot));
+    opacity:var(--hs-op);
+    transition:transform 1.75s cubic-bezier(.19,1,.22,1),opacity 1.2s cubic-bezier(.19,1,.22,1);
+    will-change:transform,opacity}
+  .hero-dim{position:absolute;inset:0;z-index:1;background:#000;opacity:0;pointer-events:none}
+
+  /* slide 1 copy steps aside while the other slides are on screen */
+  .scroll-cue{transition:opacity .7s var(--ez) .6s}
+  .hero:not(.is-s0) .scroll-cue{opacity:0!important;transition-delay:0s}
+
+  /* Pinned text scene: same grid / levels as the reference file —
+     desktop 4 columns, mobile 3 columns, every line on its own level */
+  .hx{position:absolute;top:0;left:0;right:0;margin:0 auto;width:min(100%,1360px);padding:0 var(--gutter);z-index:3;
+    display:grid;grid-template-columns:repeat(4,1fr);column-gap:1.2vw;row-gap:clamp(8px,1.6vh,18px);align-items:end;
+    color:#F7F4EC;text-shadow:0 0 28px rgba(0,0,0,.45);visibility:hidden;pointer-events:none;will-change:transform,opacity}
+  .hx h1,.hx h3{color:#F7F4EC}
+  .hx-title,.hx-list{display:contents}
+  .hx-lab{grid-column:1;grid-row:2;justify-self:end;white-space:nowrap;
+    font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:clamp(11px,1vw,15px);letter-spacing:.14em;text-transform:uppercase;
+    line-height:1;padding-bottom:.9em;color:#D8C6A6}
+  .hx-t{display:block;white-space:nowrap;font-family:'Fraunces',serif;font-weight:500;
+    font-size:calc(clamp(38px,min(6vw,10vh),112px)*var(--hxs,1));line-height:.95;letter-spacing:-.035em;color:#F7F4EC}
+  .hx-t:nth-of-type(1){grid-column:1 / 4;grid-row:1}
+  .hx-t:nth-of-type(2){grid-column:2 / -1;grid-row:2}
+  .hx-t:nth-of-type(3){grid-column:3 / -1;grid-row:3}
+  .hx-t--a{font-style:italic;font-weight:400;color:#D8C6A6}
+  .hx-t--a::after{content:"\2198";font-size:.32em;margin-left:.2em;vertical-align:.9em;letter-spacing:0;font-weight:400;font-style:normal}
+  .hx-lead{grid-column:1 / 3;grid-row:3;align-self:end;max-width:40ch;font-size:clamp(15px,1.3vw,20px);line-height:1.35;color:rgba(247,244,236,.92)}
+  .hx-rule{display:block;grid-column:1 / -1;grid-row:4;height:1px;margin-top:clamp(10px,2vh,22px);
+    background:rgba(247,244,236,.4);transform-origin:left center;transform:scaleX(0)}
+  .hx-it{list-style:none;grid-row:5;align-self:start;padding-right:.6vw;font-size:clamp(14px,1.2vw,18px);line-height:1.3;
+    font-weight:500;margin-top:clamp(12px,2vh,22px);color:#F7F4EC}
+  .hx-it i{font-style:normal;color:#D8C6A6;margin-right:.35em}
+  .hx-it:nth-child(1){grid-column:1}
+  .hx-it:nth-child(2){grid-column:2;margin-top:calc(clamp(12px,2vh,22px) + clamp(22px,4.2vh,46px))}
+  .hx-it:nth-child(3){grid-column:3;margin-top:calc(clamp(12px,2vh,22px) + 2*clamp(22px,4.2vh,46px))}
+  .hx-it:nth-child(4){grid-column:4;margin-top:calc(clamp(12px,2vh,22px) + 3*clamp(22px,4.2vh,46px))}
+  .hx-b{opacity:0;will-change:opacity,transform,filter;backface-visibility:hidden}
+  .hx-ph{margin:0;position:relative;grid-column:4;grid-row:1 / 4;align-self:end;justify-self:end;
+    width:clamp(150px,15vw,236px);aspect-ratio:4/5;pointer-events:none}
+  .hx-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;border-radius:12px;display:block;
+    filter:saturate(.85) contrast(1.03) brightness(.92);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(247,244,236,.28)}
+  .hx-ph::after{content:'';position:absolute;inset:0;border-radius:12px;background:linear-gradient(180deg,rgba(16,28,44,0) 55%,rgba(16,28,44,.55) 100%)}
+  @media (max-width:860px){
+    .hx{grid-template-columns:repeat(3,1fr);column-gap:6px;row-gap:8px}
+    .hx-lab{grid-column:1 / -1;grid-row:1;justify-self:start;padding-bottom:.4em}
+    .hx-t{font-size:calc(clamp(30px,10.2vw,60px)*var(--hxs,1));line-height:1;letter-spacing:-.03em;white-space:normal;text-wrap:balance}
+    .hx-t:nth-of-type(1){grid-column:1 / -1;grid-row:2}
+    .hx-t:nth-of-type(2){grid-column:1 / -1;grid-row:3;justify-self:end}
+    .hx-t:nth-of-type(3){grid-column:2 / -1;grid-row:4}
+    .hx-lead{grid-column:2 / -1;grid-row:5;align-self:start;margin-top:10px;font-size:clamp(14px,3.9vw,17px)}
+    .hx-rule{grid-row:6;margin-top:6px}
+    .hx-it{font-size:clamp(13px,3.5vw,16px);margin-top:0;padding-right:0}
+    .hx-it:nth-child(1){grid-column:1 / 3;grid-row:7;margin-top:8px}
+    .hx-it:nth-child(2){grid-column:2 / -1;grid-row:8;margin-top:0}
+    .hx-it:nth-child(3){grid-column:1 / 3;grid-row:9;margin-top:0}
+    .hx-it:nth-child(4){grid-column:2 / -1;grid-row:10;margin-top:0}
+    .hx-ph{grid-column:1;grid-row:4 / 6;align-self:start;justify-self:start;width:100%;max-width:130px;margin-top:6px}
+    .hx-ph img{border-radius:10px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ LOGO (one element: centred intro → top-left → compact on scroll) ============ -->
+<a href="#top" class="brand-logo" id="brandLogo" aria-label="ALMAREX — Home">
+  <img class="ll" src="https://i.postimg.cc/zv8g26m2/logo-almarex2-1.webp" alt="Almarex">
+  <img class="ld" src="https://i.postimg.cc/WbDwghr6/logo-almarex.webp" alt="">
+</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav-links">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <!-- TODO: replace with the official LinkedIn URL -->
+    <a class="hl" href="https://www.linkedin.com/company/almarex-aviation-ventures" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="header-utility">Dubai, UAE</span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  <a class="ml" href="https://www.linkedin.com/company/almarex-aviation-ventures" target="_blank" rel="noopener">LinkedIn</a>
+</nav>
+
+<!-- ============ HERO ============
+     The whole page is a chain of hero slides. Each .hx block below is one slide's pinned text scene (add / repeat / reorder freely;
+     a video layer is created for every .hx; video links are in the VIDS list in the script). After the last slide the page
+     continues with the lead form and the footer. -->
+<section class="hero is-s0" id="top">
+  <div class="hero-slides" aria-hidden="true"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-dim"></div>
+
+  <div class="hx" data-slide="0">
+    <span class="hx-lab">Almarex</span>
+    <h1 class="hx-title"><span class="hx-t">Where Aviation</span><span class="hx-t">Connects</span><span class="hx-t hx-t--a">the World.</span></h1>
+    <p class="hx-lead">Dubai-based international aviation business platform connecting airlines, airports, investors and governments across the Middle East, Europe, Central Asia and emerging markets.</p>
+  </div>
+
+  <div class="hx" data-slide="1" data-nav="about">
+    <span class="hx-lab">Who we are</span>
+    <h3 class="hx-title"><span class="hx-t">Aviation experience.</span><span class="hx-t">Commercial vision.</span><span class="hx-t hx-t--a">Global connections.</span></h3>
+    <p class="hx-lead">Commercial, strategic and operational solutions for the global aviation industry, delivered from Dubai.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Airlines and cargo airlines</li>
+      <li class="hx-it"><i>+</i>Airports and ground handlers</li>
+      <li class="hx-it"><i>+</i>Investors and financial institutions</li>
+      <li class="hx-it"><i>+</i>Governments, tourism boards and logistics providers</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="2">
+    <span class="hx-lab">Dubai to the world</span>
+    <h3 class="hx-title"><span class="hx-t">From Dubai</span><span class="hx-t">to the markets</span><span class="hx-t hx-t--a">that matter.</span></h3>
+    <p class="hx-lead">ALMAREX uses that vantage point to connect opportunity across fast-growing trade, travel and investment corridors.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Middle East and Europe</li>
+      <li class="hx-it"><i>+</i>Caucasus and Central Asia</li>
+      <li class="hx-it"><i>+</i>India and Africa</li>
+      <li class="hx-it"><i>+</i>North America</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="3">
+    <span class="hx-lab">Our platform</span>
+    <h3 class="hx-title"><span class="hx-t">One platform.</span><span class="hx-t">Three core</span><span class="hx-t hx-t--a">businesses.</span></h3>
+    <p class="hx-lead">Aviation, cargo and development, delivered as one team.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Aviation: airline representation (GSA/GSSA), route development, ACMI and charter</li>
+      <li class="hx-it"><i>+</i>Cargo: cargo representation, charter, air freight and network development</li>
+      <li class="hx-it"><i>+</i>Development: airports, aviation investment, advisory and public-private partnerships</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="4" data-nav="services">
+    <span class="hx-lab">Our services</span>
+    <h3 class="hx-title"><span class="hx-t">Six directions.</span><span class="hx-t">One aviation</span><span class="hx-t hx-t--a">partner.</span></h3>
+    <p class="hx-lead">Every opportunity is different. ALMAREX assembles the right commercial, operational, financial and local-market expertise around each mandate.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Airline representation (GSA / GSSA)</li>
+      <li class="hx-it"><i>+</i>Aircraft and fleet solutions: acquisition, sales, sourcing, ACMI, wet and dry lease</li>
+      <li class="hx-it"><i>+</i>Passenger and cargo charter programs, organised end to end</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="5">
+    <span class="hx-lab">Our services</span>
+    <h3 class="hx-title"><span class="hx-t">Cargo, advice</span><span class="hx-t">and capital,</span><span class="hx-t hx-t--a">under one roof.</span></h3>
+    <p class="hx-lead">The same team also covers freight, advisory and infrastructure.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Cargo and logistics: commercial management and air freight</li>
+      <li class="hx-it"><i>+</i>Aviation advisory: airline start-ups, market entry, restructuring</li>
+      <li class="hx-it"><i>+</i>Investment and development: airports, infrastructure and investors</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="6">
+    <span class="hx-lab">Why Almarex</span>
+    <h3 class="hx-title"><span class="hx-t">Why industry</span><span class="hx-t">leaders choose</span><span class="hx-t hx-t--a">Almarex.</span></h3>
+    <p class="hx-lead">We approach aviation as a system: demand, capacity, infrastructure, regulation, capital and partnerships must work together. Our role is to align those elements and keep the opportunity moving.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Dubai-based international platform</li>
+      <li class="hx-it"><i>+</i>Senior aviation executives</li>
+      <li class="hx-it"><i>+</i>Global airline relationships</li>
+      <li class="hx-it"><i>+</i>Commercial and operational expertise</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="7">
+    <span class="hx-lab">Why Almarex</span>
+    <h3 class="hx-title"><span class="hx-t">Regional know-how,</span><span class="hx-t">one contact,</span><span class="hx-t hx-t--a">lasting ties.</span></h3>
+    <p class="hx-lead">A flexible execution model built around a single point of contact.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Proven regional market knowledge</li>
+      <li class="hx-it"><i>+</i>Flexible execution model</li>
+      <li class="hx-it"><i>+</i>One point of contact</li>
+      <li class="hx-it"><i>+</i>Long-term partnerships</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="8" data-nav="leadership">
+    <figure class="hx-ph"><img src="https://i.postimg.cc/ZYGFSfYd/1586640398907.jpg" alt="Makar Petrosyan" loading="lazy" decoding="async"></figure>
+    <span class="hx-lab">Leadership</span>
+    <h3 class="hx-title"><span class="hx-t">Makar Petrosyan.</span><span class="hx-t hx-t--a">Co-Founder.</span></h3>
+    <p class="hx-lead">Entrepreneur with 22+ years of experience in business and marketing strategy, leading growth and international partnerships.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>22+ years in business and marketing strategy</li>
+      <li class="hx-it"><i>+</i>Honorary Consul of Moldova since 2019</li>
+      <li class="hx-it"><i>+</i>Cross-border relationships and a strong network</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="9">
+    <figure class="hx-ph"><img src="https://i.postimg.cc/DzxP3nmF/1625803882294.jpg" alt="Paruyr Vardanyan" loading="lazy" decoding="async"></figure>
+    <span class="hx-lab">Leadership</span>
+    <h3 class="hx-title"><span class="hx-t">Paruyr Vardanyan.</span><span class="hx-t">Co-Founder &amp;</span><span class="hx-t hx-t--a">Director General.</span></h3>
+    <p class="hx-lead">Experienced manager with a proven track record in the airline and aviation industry.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Negotiation and budgeting</li>
+      <li class="hx-it"><i>+</i>Business planning and partnerships</li>
+      <li class="hx-it"><i>+</i>Operations management</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="10" data-nav="projects">
+    <span class="hx-lab">Featured projects</span>
+    <h3 class="hx-title"><span class="hx-t">Opportunities</span><span class="hx-t">shaped for</span><span class="hx-t hx-t--a">delivery.</span></h3>
+    <p class="hx-lead">Representative project categories. Client details remain confidential.</p>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Aircraft acquisition and leasing</li>
+      <li class="hx-it"><i>+</i>Cargo charter development</li>
+      <li class="hx-it"><i>+</i>Airline market entry</li>
+    </ul>
+  </div>
+
+  <div class="hx" data-slide="11">
+    <span class="hx-lab">Featured projects</span>
+    <h3 class="hx-title"><span class="hx-t">Start-ups,</span><span class="hx-t">networks and</span><span class="hx-t hx-t--a">infrastructure.</span></h3>
+    <i class="hx-rule"></i>
+    <ul class="hx-list">
+      <li class="hx-it"><i>+</i>Airline start-up and network development</li>
+      <li class="hx-it"><i>+</i>Airport and aviation infrastructure</li>
+    </ul>
+  </div>
+
+  <div class="scroll-cue"><span class="stick"></span> Scroll</div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="final-cta" id="contact">
+  <div class="wrap"><div class="final-cta-inner reveal">
+    <div class="eyebrow on-dark"><span class="code">CTA</span> Contact</div>
+    <h2>Ready to build the next aviation <em>opportunity</em>?</h2>
+    <div class="contact-grid">
+      <div>
+        <p>Whether launching a new airline, expanding into new markets or developing aviation infrastructure, ALMAREX delivers the experience, network and execution to make projects successful.</p>
+        <ul class="cm">
+          <li><span>WhatsApp</span><a href="https://wa.me/971585555050" target="_blank" rel="noopener">+971 58 555 5050</a></li>
+          <li><span>Email</span><a href="mailto:ceo@almarex.ae">ceo@almarex.ae</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/company/almarex-aviation-ventures" target="_blank" rel="noopener">ALMAREX on LinkedIn</a></li>
+        </ul>
+        <p class="legal">ALMAREX AVIATION VENTURES FZCO<br>Dubai Silicon Oasis, Dubai, UAE<br>License No. 91406</p>
+      </div>
+      <form class="cform" id="cform">
+        <input name="fname" placeholder="Name" required autocomplete="name">
+        <input name="femail" type="email" placeholder="Email" required autocomplete="email">
+        <input name="fcompany" placeholder="Company" autocomplete="organization">
+        <textarea name="fmsg" rows="4" placeholder="Message" required></textarea>
+        <button class="pill" type="submit">Send message</button>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-video-wrap" aria-hidden="true">
+    <video class="footer-bg-video" muted playsinline preload="auto" autoplay
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/footer.mp4"></video>
+    <video class="footer-bg-video" muted playsinline preload="auto"
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/footer.mp4"></video>
+  </div>
+  <div class="footer-overlay"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="https://i.postimg.cc/WbDwghr6/logo-almarex.webp" alt="Almarex"></div>
+        <p>ALMAREX AVIATION VENTURES FZCO is a Dubai-based international aviation business platform connecting strategy, markets, capacity, infrastructure and capital.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="#services">Airline Representation</a></li><li><a href="#services">Aircraft &amp; Fleet Solutions</a></li><li><a href="#services">Passenger &amp; Cargo Charter</a></li><li><a href="#services">Cargo &amp; Logistics</a></li><li><a href="#services">Aviation Advisory</a></li><li><a href="#services">Investment &amp; Development</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="#about">About</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Get in touch</h4><ul>
+        <li>Dubai Silicon Oasis, Dubai, UAE</li><li>License No. 91406</li>
+        <li><a href="mailto:ceo@almarex.ae">ceo@almarex.ae</a></li><li><a href="tel:+971585555050">+971 58 555 5050</a></li>
+        <li><a href="https://www.linkedin.com/company/almarex-aviation-ventures" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ALMAREX AVIATION VENTURES FZCO. All rights reserved.</span>
+      <nav>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookie Notice</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+  var root=document.documentElement,body=document.body,header=$('#siteHeader');
+  var heroEl=$('#top');
+  var heroApi={};                                           /* filled in by the hero module below */
+
+  /* ---- Logo sizing (uses real image aspect ratio) ---- */
+  var logoImg=$('#brandLogo .ll'),ar=3;
+  function sizeLogo(){
+    var vw=innerWidth,vh=innerHeight,mob=vw<760,s=root.style;
+    var hero=Math.min(mob?88:120,vw*.56/ar);
+    s.setProperty('--la',ar);
+    s.setProperty('--w-intro',Math.min(vw*.84,vh*.6*ar,760)+'px');
+    s.setProperty('--w-hero',hero*ar+'px');
+    s.setProperty('--w-sm',Math.min((mob?36:44)*ar,vw*.4)+'px');
+    s.setProperty('--hh',(hero+44)+'px');
+  }
+  function setAr(){if(logoImg.naturalWidth)ar=logoImg.naturalWidth/logoImg.naturalHeight;sizeLogo()}
+  logoImg.complete?setAr():logoImg.addEventListener('load',setAr);
+  sizeLogo();addEventListener('resize',sizeLogo);
+
+  /* ---- Slide layers: one per text scene. Videos are attached lazily (current slide +/- 1 only). ----
+     Replace / reorder these links freely; with fewer videos than slides the list simply repeats. */
+  var VIDS=[
+    'https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero1.mp4',
+    'https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero2.mp4',
+    'https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero3.mp4',
+    'https://raw.githubusercontent.com/Ramashery/Almarex/refs/heads/main/video/e1.mp4'
+  ];
+  (function buildLayers(){
+    var box=$('.hero-slides',heroEl),n=$$('.hx',heroEl).length;
+    for(var i=0;i<n;i++){
+      var d=document.createElement('div'),v=document.createElement('video');
+      d.className='hs'+(i===0?' is-active':'');v.className='hs-v';
+      v.muted=true;v.loop=true;v.playsInline=true;v.preload='auto';
+      v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('disablepictureinpicture','');
+      if(i===0)v.autoplay=true;
+      if(i<=1)v.src=VIDS[i%VIDS.length];
+      d.appendChild(v);box.appendChild(d);
+    }
+  })();
+
+  /* ---- Intro: the logo hangs centred over the hero for 3s, then flies to the top-left corner.
+     Same mechanics as the profile windows closing on /about: the fixed box is measured at its start and at its
+     end position, then left / top / width / height are animated with the Web Animations API
+     (900ms, cubic-bezier(.76,0,.24,1)) and the box is handed back to the CSS afterwards. ---- */
+  var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var FLY_EASE='cubic-bezier(.76, 0, .24, 1)',FLY_MS=900;
+  root.classList.add('intro');
+  var logo=$('#brandLogo'),started=false;
+  function introDone(){root.classList.remove('intro');if(heroApi.open)heroApi.open()}
+  function flyLogo(){
+    if(reduce||!logo.animate){body.classList.add('logo-done');introDone();return}
+    var px=function(n){return n+'px'};
+    var from=logo.getBoundingClientRect();
+    logo.style.transition='none';logo.style.animation='none';
+    body.classList.add('logo-done');                          /* CSS now puts it in the corner… */
+    var to=logo.getBoundingClientRect();                      /* …measure where that is… */
+    var box=function(r){return{left:px(r.left),top:px(r.top),width:px(r.width),height:px(r.height)}};
+    Object.assign(logo.style,box(from),{transform:'none'});   /* …and pin it back over the hero, same place on screen */
+    var fly=logo.animate([box(from),box(to)],{duration:FLY_MS,easing:FLY_EASE,fill:'both'});
+    var done=function(){
+      fly.cancel();
+      logo.style.left=logo.style.top=logo.style.width=logo.style.height=logo.style.transform=logo.style.animation='';
+      void logo.offsetWidth;logo.style.transition='';
+      introDone();
+    };
+    fly.finished.then(done,done);
+  }
+  function startIntro(){
+    if(started)return;started=true;
+    setTimeout(flyLogo,3000);
+  }
+  var hv=$('.hs-v');
+  if(!hv.paused&&hv.readyState>=3)startIntro();else hv.addEventListener('playing',startIntro,{once:true});
+  setTimeout(startIntro,5000);
+
+  /* ---- Header theme (every section of this page is dark) ---- */
+  var dark=[$('#top'),$('#contact'),$('footer')];
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var onDark=false,P=32;
+    body.classList.toggle('scrolled',scrollY>40);
+    dark.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<=P&&r.bottom>=P)onDark=true});
+    header.classList.toggle('on-light',!onDark);
+    header.classList.toggle('on-dark',onDark);
+    body.classList.toggle('on-light',!onDark);
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  addEventListener('scroll',req,{passive:true});addEventListener('resize',req);update();
+
+  /* ---- Mobile nav ---- */
+  var toggle=$('#menuToggle'),mnav=$('#mobileNav'),bd=$('#mobileNavBackdrop');
+  function closeMenu(){[toggle,mnav,bd].forEach(function(e){e.classList.remove('open')})}
+  toggle.addEventListener('click',function(){[toggle,mnav,bd].forEach(function(e){e.classList.toggle('open')})});
+  bd.addEventListener('click',closeMenu);
+  $$('a',mnav).forEach(function(a){a.addEventListener('click',closeMenu)});
+
+  /* ---- Reveal on scroll (contact form) ---- */
+  var rev=$$('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.15,rootMargin:'0px 0px -60px 0px'});
+    rev.forEach(function(el){io.observe(el)});
+  }else rev.forEach(function(el){el.classList.add('in')});
+
+  /* ---- Contact form → opens the visitor's mail app (static site, no backend) ---- */
+  $('#cform').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target.elements;
+    var body_='Name: '+f.fname.value+'\nEmail: '+f.femail.value+'\nCompany: '+f.fcompany.value+'\n\n'+f.fmsg.value;
+    location.href='mailto:ceo@almarex.ae?subject='+encodeURIComponent('Website enquiry — '+f.fname.value)+'&body='+encodeURIComponent(body_);
+  });
+
+  /* ---- HERO: the whole page is a chain of hero slides ----
+     Every slide = a video layer + its own pinned text scene (the stepped 4-col / 3-col layout).
+     Scroll input (wheel / touch / keys) first drives the text scene of the current slide (blur-in -> sharp -> blur-out).
+     When the scene is finished, the next slide warps in vertically (tpl_services mechanics) and pins in turn.
+     After the last scene the hero unpins and the page scrolls on to the lead form and the footer.
+     Up reverses everything; at the very top of the page, scrolling up re-enters the last scene. ---- */
+  (function(){
+    var hero=heroEl;if(!hero)return;
+    var layers=$$('.hs',hero),vids=layers.map(function(l){return $('video',l)});
+    var N=layers.length,LAST=N-1;
+    var SV_MS=1750,SV_SX=2,SV_SY=1.5,SV_ROT=20,SV_OUT=100,SV_IN=35;      /* same figures as tpl_services */
+    var EASE_60=reduce?1:.05,TOUCH_GAIN=1.6,FLING_MS=220,FLING_MIN=.1,FLING_MAX=1300,STEP=80,SQ_DIM=.55,TEXT_MIN=1800,TEXT_VH=2.4;
+    var OPEN=.26;                                           /* after a nav jump / the intro, the title is shown at this point of its scene (0 = wait for scroll) */
+    var cur=0,busy=false,released=false,want=0,acc=0,gen=0;
+    var BASE=TEXT_MIN,TEXT=TEXT_MIN,pos=0,disp=0,raf=0,last=0,hhPx=150;
+    var dim=$('.hero-dim',hero),noop=function(){};
+    var smooth=function(x){x=x<0?0:x>1?1:x;return x*x*(3-2*x)};
+
+    /* ---- text scenes ---- */
+    function wrapB(el){if(!el)return null;el.classList.add('hx-b');return{el:el,last:''}}
+    var scenes={},navMap={};
+    $$('.hx',hero).forEach(function(col){
+      var k=col.getAttribute('data-slide'),items=$$('.hx-it',col).map(wrapB);
+      scenes[k]={col:col,photo:wrapB($('.hx-ph',col)),num:wrapB($('.hx-lab',col)),titles:$$('.hx-t',col),
+        parts:$$('.hx-t',col).map(wrapB),lead:wrapB($('.hx-lead',col)),rule:$('.hx-rule',col),ruleLast:-1,
+        items:items,len:items.length>=3?1:(items.length?.85:.6),colH:600};      /* scenes with fewer blocks need less scrolling */
+      var nv=col.getAttribute('data-nav');if(nv)navMap[nv]=+k;
+    });
+    var lenCur=function(){return scenes[cur]?scenes[cur].len:1};
+    /* shrink the stepped title so the widest line still fits between its column and the right edge */
+    function fit(o){
+      o.col.style.setProperty('--hxs',1);
+      var cs=getComputedStyle(o.col),cr=o.col.getBoundingClientRect();
+      var L=cr.left+parseFloat(cs.paddingLeft),R=cr.right-parseFloat(cs.paddingRight),min=1;
+      o.titles.forEach(function(p){
+        var w=p.scrollWidth,js=getComputedStyle(p).justifySelf;
+        var avail=(js==='end'||js==='flex-end'||js==='right')?R-L:R-p.getBoundingClientRect().left;
+        if(w>avail&&avail>0)min=Math.min(min,avail/w);
+      });
+      o.col.style.setProperty('--hxs',min<1?(min*.97).toFixed(3):1);
+    }
+    function setText(){TEXT=Math.max(1,Math.round(BASE*lenCur()))}
+    function measure(){
+      var vh=innerHeight;
+      hhPx=header.offsetHeight||150;
+      BASE=Math.max(TEXT_MIN,Math.round(TEXT_VH*vh));
+      var nt=Math.max(1,Math.round(BASE*lenCur()));
+      if(TEXT>0){pos=pos/TEXT*nt;disp=disp/TEXT*nt}
+      TEXT=nt;
+      Object.keys(scenes).forEach(function(k){var o=scenes[k];fit(o);o.colH=o.col.offsetHeight});
+      render();
+    }
+
+    function put(blk,appear,soften,out){
+      if(!blk)return;
+      var a=smooth(appear),m=1-soften,op=a*(.3+.7*m);
+      var bl=reduce?0:(1-a)*12+soften*4+out*10,ty=reduce?0:(1-a)*26-out*14;
+      var key=op.toFixed(3)+'|'+bl.toFixed(1)+'|'+ty.toFixed(1);
+      if(key===blk.last)return;blk.last=key;
+      blk.el.style.opacity=op.toFixed(3);
+      blk.el.style.filter=bl>.05?'blur('+bl.toFixed(1)+'px)':'none';
+      blk.el.style.transform='translate3d(0,'+ty.toFixed(1)+'px,0)';
+    }
+    /* t = 0..1 over the whole scene:
+       .02-.24 label + title lines blur in, one level after another   .20-.32 lead   .30-.42 rule drawn
+       .38-.84 the points land one by one (newest sharp, earlier ones soften)
+       .86-.94 everything in focus   .96-1 blur out */
+    function paintScene(o,t){
+      var on=t>0&&t<1;
+      o.col.style.visibility=on?'visible':'hidden';
+      if(!on)return;
+      var vh=innerHeight,topR=Math.max(96,hhPx),availH=vh-topR-32;
+      var cy=Math.max(topR,(vh-o.colH)/2);
+      if(o.colH>availH)cy=topR-(o.colH-availH)*smooth((t-.3)/.5);
+      o.col.style.transform='translate3d(0,'+cy.toFixed(1)+'px,0)';
+      var n=o.items.length,out=smooth((t-.96)/.04),fin=smooth((t-.86)/.08);
+      var dimH=n?1-.55*smooth((t-.38)/.12)*(1-fin):1;
+      o.col.style.opacity=(1-out).toFixed(3);
+      var softHead=(1-dimH)/.55*.5,j;
+      put(o.photo,(t-.10)/.16,0,out);
+      put(o.num,(t-.02)/.10,softHead*.5,out);
+      for(j=0;j<o.parts.length;j++)put(o.parts[j],(t-(.02+j*.06))/.10,softHead,out);
+      put(o.lead,(t-.20)/.12,softHead,out);
+      if(o.rule){var rl=Math.round(smooth((t-.30)/.12)*1000)/1000;if(rl!==o.ruleLast){o.ruleLast=rl;o.rule.style.transform='scaleX('+rl+')'}}
+      for(j=0;j<n;j++){
+        var st=.38+j*.12,next=(j<n-1)?smooth((t-(st+.12))/.08):0;
+        put(o.items[j],(t-st)/.10,next*(1-fin),out);
+      }
+    }
+    function render(){
+      var t=0;
+      Object.keys(scenes).forEach(function(k){
+        var o=scenes[k];
+        if(+k===cur&&!busy){t=Math.min(1,Math.max(0,disp/TEXT));paintScene(o,t)}
+        else o.col.style.visibility='hidden';
+      });
+      dim.style.opacity=(SQ_DIM*smooth(t/.05)*(1-smooth((t-.95)/.05))).toFixed(3);
+      hero.classList.toggle('is-s0',cur===0&&!busy&&!released&&t<.5);   /* "Scroll" cue only while the first title is still arriving */
+    }
+
+    /* ---- video loading: only the current slide and its neighbours keep a source ---- */
+    function prime(c){
+      vids.forEach(function(v,i){
+        if(Math.abs(i-c)<=1){if(!v.getAttribute('src')){v.src=VIDS[i%VIDS.length];v.load()}}
+        else if(v.getAttribute('src')){v.pause();v.removeAttribute('src');v.load()}
+      });
+    }
+
+    /* ---- slide change: the tpl_services vertical warp ---- */
+    function setState(i,s){
+      layers[i].style.setProperty('--hs-oy',s.oy+'%');
+      var v=vids[i].style;
+      v.setProperty('--hs-iy',s.iy+'%');v.setProperty('--hs-sx',s.sx);v.setProperty('--hs-sy',s.sy);
+      v.setProperty('--hs-rot',s.rot+'deg');v.setProperty('--hs-op',s.op);
+    }
+    var REST=function(op){return{oy:0,iy:0,sx:1,sy:1,rot:0,op:op}};
+    function playV(v,fromStart){try{if(fromStart)v.currentTime=0}catch(e){}var p=v.play();if(p&&p.catch)p.catch(noop)}
+
+    function go(to,dir){
+      if(busy||to===cur||to<0||to>LAST)return;
+      busy=true;var from=cur,myGen=gen;cur=to;
+      want=0;acc=0;setText();pos=disp=(dir>0?0:TEXT);
+      var tw=layers[to],fw=layers[from],tv=vids[to],fv=vids[from];
+      prime(to);playV(tv,true);
+      if(reduce){
+        fw.classList.remove('is-active');fv.pause();setState(from,REST(0));
+        tw.classList.add('is-active');setState(to,REST(1));
+        busy=false;render();kick();return;
+      }
+      tw.classList.add('is-active','is-instant');
+      setState(to,{oy:SV_OUT*dir,iy:-SV_IN*dir,sx:SV_SX,sy:SV_SY,rot:SV_ROT,op:.5});   /* park the newcomer off-screen, pre-warped */
+      void tw.offsetWidth;
+      requestAnimationFrame(function(){
+        if(myGen!==gen)return;
+        tw.classList.remove('is-instant');
+        setState(to,REST(1));
+        setState(from,{oy:-SV_OUT*dir,iy:SV_IN*dir,sx:SV_SX,sy:SV_SY,rot:-SV_ROT,op:.5});
+        fw.classList.remove('is-active');
+      });
+      setTimeout(function(){
+        if(myGen!==gen)return;
+        fv.pause();fw.classList.add('is-instant');setState(from,REST(0));void fw.offsetWidth;fw.classList.remove('is-instant');
+        busy=false;render();kick();
+      },SV_MS);
+      render();
+    }
+    /* instant jump to any slide (menu links, "Home", engaging the last scene again) */
+    function jump(i,atEnd){
+      gen++;busy=false;released=false;want=0;acc=0;cur=i;setText();
+      pos=disp=atEnd?TEXT:0;
+      layers.forEach(function(l,k){
+        l.classList.add('is-instant');l.classList.toggle('is-active',k===i);
+        setState(k,REST(k===i?1:0));void l.offsetWidth;l.classList.remove('is-instant');
+        if(k!==i)vids[k].pause();
+      });
+      prime(i);playV(vids[i],true);
+      render();
+    }
+    function toSlide(i){
+      if(root.classList.contains('intro'))return;
+      if(window.scrollY>0)window.scrollTo({top:0,left:0,behavior:'instant'});
+      jump(i,false);
+      heroApi.open();
+    }
+    function toContact(){
+      if(root.classList.contains('intro'))return;
+      if(!released){jump(LAST,true);released=true}
+      var c=document.getElementById('contact');if(c)c.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function release(){released=true;want=0;acc=0;render()}
+    function engage(){released=false;cur=LAST;setText();pos=disp=TEXT;want=0;acc=0;render()}
+    heroApi.open=function(){if(cur===0&&!busy&&!released&&pos===0&&OPEN>0){pos=Math.round(TEXT*OPEN);kick()}};
+
+    /* ---- input -> scene position ---- */
+    function input(dy){
+      if(busy||!dy)return;
+      if(want&&dy*want<0)want=0;
+      if(dy>0){
+        if(acc<0)acc=0;
+        if(pos<TEXT){pos=Math.min(TEXT,pos+dy);acc=0;want=0}
+        else{acc+=dy;if(acc>=STEP)want=1}
+      }else{
+        if(acc>0)acc=0;
+        if(pos>0){pos=Math.max(0,pos+dy);acc=0;want=0}
+        else{acc+=dy;if(acc<=-STEP)want=-1}
+      }
+      kick();
+    }
+    function tick(now){
+      raf=0;
+      var dt=last?Math.min(50,now-last):16.667;last=now;
+      var k=1-Math.pow(1-EASE_60,dt/16.667),d=pos-disp;
+      if(Math.abs(d)<.2)disp=pos;else disp+=d*k*1.2;
+      if(!busy){
+        render();
+        if(want){                                           /* change slide only once the text has fully come in / gone out */
+          var ready=want>0?(pos>=TEXT&&disp>=TEXT-1):(pos<=0&&disp<=1);
+          if(ready){var w=want;want=0;if(w>0){if(cur<LAST)go(cur+1,1);else release()}else{if(cur>0)go(cur-1,-1);else acc=0}}
+        }
+      }
+      if(!busy&&(disp!==pos||want))raf=requestAnimationFrame(tick);else last=0;
+    }
+    function kick(){if(!raf){last=0;raf=requestAnimationFrame(tick)}}
+
+    function menuOpen(){var m=$('#mobileNav');return m&&m.classList.contains('open')}
+    /* returns true when the hero consumed the gesture */
+    function route(dy,e){
+      if(root.classList.contains('intro'))return false;
+      if(menuOpen()){if(e&&e.cancelable)e.preventDefault();return true}
+      if(window.scrollY>1)return false;                     /* page already scrolled: native scrolling */
+      if(released){if(dy<0)engage();else return false}
+      if(e&&e.cancelable)e.preventDefault();
+      input(dy);return true;
+    }
+    addEventListener('wheel',function(e){
+      if(e.ctrlKey||Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
+      var dy=e.deltaY;if(e.deltaMode===1)dy*=16;else if(e.deltaMode===2)dy*=innerHeight;
+      route(dy,e);
+    },{passive:false});
+
+    var ty=null,tt=0,tv=0,touching=false;
+    addEventListener('touchstart',function(e){
+      if(e.touches.length!==1){ty=null;return}
+      ty=e.touches[0].clientY;tt=performance.now();tv=0;touching=false;
+    },{passive:true});
+    addEventListener('touchmove',function(e){
+      if(ty===null||e.touches.length!==1)return;
+      var y=e.touches[0].clientY,now=performance.now(),dy=(ty-y)*TOUCH_GAIN;
+      tv=tv*.7+(dy/Math.max(1,now-tt))*.3;tt=now;ty=y;
+      touching=route(dy,e);
+    },{passive:false});
+    function touchEnd(){
+      if(touching&&!busy){
+        var v=(performance.now()-tt>80)?0:tv;
+        if(Math.abs(v)>FLING_MIN)input(Math.max(-FLING_MAX,Math.min(FLING_MAX,v*FLING_MS)));
+      }
+      ty=null;touching=false;
+    }
+    addEventListener('touchend',touchEnd,{passive:true});
+    addEventListener('touchcancel',touchEnd,{passive:true});
+
+    addEventListener('keydown',function(e){
+      var a=document.activeElement;if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))return;
+      if(e.altKey||e.ctrlKey||e.metaKey)return;
+      var vh=innerHeight,dy=null;
+      switch(e.key){
+        case 'ArrowDown':dy=90;break;
+        case 'ArrowUp':dy=-90;break;
+        case 'PageDown':dy=vh*.85;break;
+        case 'PageUp':dy=-vh*.85;break;
+        case ' ':dy=e.shiftKey?-vh*.85:vh*.85;break;
+        default:return;
+      }
+      route(dy,e);
+    });
+
+    /* the scrollbar (or anything else) moved the page while a slide was still pinned: treat the hero as finished */
+    addEventListener('scroll',function(){
+      if(!released&&!busy&&window.scrollY>40&&!root.classList.contains('intro')){jump(LAST,true);released=true}
+    },{passive:true});
+
+    /* menu / footer links: "Home" and the logo go to slide 1, section links to the matching slide, "Contact" to the lead form */
+    $$('a[href^="#"]').forEach(function(a){
+      var h=a.getAttribute('href');if(!h||h==='#')return;
+      a.addEventListener('click',function(e){
+        var id=h.slice(1);
+        if(id==='top'){e.preventDefault();toSlide(0)}
+        else if(id==='contact'){e.preventDefault();toContact()}
+        else if(Object.prototype.hasOwnProperty.call(navMap,id)){e.preventDefault();toSlide(navMap[id])}
+      });
+    });
+
+    /* keep the active slide's video from running while the hero is off screen */
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        var v=vids[cur];if(!v)return;
+        if(es[0].isIntersecting)v.play().catch(noop);else v.pause();
+      }).observe(hero);
+    }
+
+    setState(0,REST(1));
+    var rt=0;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measure,120)});
+    measure();
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
+    addEventListener('load',measure);
+  })();
+
+  /* ---- Crossfade slideshow (footer) ---- */
+  function crossfade(sel){
+    var vs=$$(sel);if(!vs.length)return;var cur=0,busy=false,F=1.2;
+    function go(n){
+      var c=vs[cur],x=vs[n];x.currentTime=0;x.play().catch(function(){});x.classList.add('bg-video-active');c.classList.remove('bg-video-active');cur=n;
+      setTimeout(function(){c.pause();busy=false},F*1000);
+    }
+    function next(i){if(i!==cur||busy)return;busy=true;go((cur+1)%vs.length)}
+    vs.forEach(function(v,i){
+      v.addEventListener('timeupdate',function(){var l=v.duration-v.currentTime;if(l<=F&&l>0)next(i)});
+      v.addEventListener('ended',function(){next(i)});
+    });
+    vs[0].classList.add('bg-video-active');vs[0].play().catch(function(){});
+  }
+  crossfade('.footer-video-wrap .footer-bg-video');
+})();
+</script>
+
+</body>
+</html>

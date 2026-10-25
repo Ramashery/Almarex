@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMAREX AVIATION VENTURES FZCO | International Aviation Business Platform, Dubai</title>
+<meta name="description" content="ALMAREX AVIATION VENTURES FZCO is a Dubai-based international aviation business platform: airline representation, aircraft &amp; fleet solutions, passenger &amp; cargo charter, cargo &amp; logistics, aviation advisory, investment &amp; development.">
+<meta name="theme-color" content="#101C2C">
+
+<!-- Open Graph / social preview (LinkedIn, WhatsApp, etc.)
+     TODO for IT: add <meta property="og:url"> + <link rel="canonical"> with the final domain,
+     and replace og:image with a dedicated 1200x630 JPG hosted on the same domain. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALMAREX AVIATION VENTURES FZCO">
+<meta property="og:title" content="ALMAREX | Where Aviation Connects the World">
+<meta property="og:description" content="International aviation business platform based in Dubai: airline representation, aircraft &amp; fleet solutions, charter, cargo, advisory and investment.">
+<meta property="og:image" content="https://i.postimg.cc/Y9kDdLZd/dubai.jpg">
+<meta property="og:image:alt" content="Dubai: home base of ALMAREX AVIATION VENTURES FZCO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ALMAREX | Where Aviation Connects the World">
+<meta name="twitter:description" content="International aviation business platform based in Dubai.">
+<meta name="twitter:image" content="https://i.postimg.cc/Y9kDdLZd/dubai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F4EC;
+    --bg-soft:#EFEAE0;
+    --surface:#FFFFFF;
+    --navy:#101C2C;
+    --navy-2:#1B2E44;
+    --teal:#2E5F5A;
+    --bronze:#A9814C;
+    --ink:#1B2430;
+    --ink-soft:#5B6472;
+    --line:#DAD3C2;
+    --line-dark:rgba(255,255,255,.18);
+    --max:1220px;
+    --gutter:clamp(24px, 5vw, 64px);
+    --rail-x: 6px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;scroll-padding-top:76px;}
+  [hidden]{display:none !important;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3{margin:0;font-family:'Fraunces', serif;font-weight:500;color:var(--navy);letter-spacing:-0.01em;}
+  h1 em, h2 em, h3 em, p em{font-style:italic;font-weight:400;color:var(--teal);}
+  p{margin:0;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
+
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:18px;
+  }
+  .eyebrow .code{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:auto;
+    padding:2px 8px;
+    border:1px solid var(--teal);
+    border-radius:20px;
+    color:var(--teal);
+    font-size:.68rem;
+  }
+  .eyebrow.on-dark{color:#CFE3D8;}
+  .eyebrow.on-dark .code{border-color:#CFE3D8;color:#CFE3D8;}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:.92rem;
+    letter-spacing:.01em;
+    padding:15px 28px;
+    border-radius:2px;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:all .35s cubic-bezier(.22,.61,.36,1);
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--navy);color:var(--bg);}
+  .btn-primary:hover{background:var(--bronze);color:var(--navy);}
+  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy);}
+  .btn-ghost:hover{border-color:var(--bronze);color:var(--bronze);}
+  .btn-onvideo{background:rgba(247,244,236,.95);color:var(--navy);}
+  .btn-onvideo:hover{background:var(--bronze);color:var(--navy);}
+  .btn-ghost-onvideo{background:transparent;color:#F7F4EC;border-color:rgba(247,244,236,.55);}
+  .btn-ghost-onvideo:hover{border-color:#F7F4EC;}
+  .btn .arrow{transition:transform .35s cubic-bezier(.22,.61,.36,1);}
+  .btn:hover .arrow{transform:translateX(4px);}
+
+  /* ---------- Header (always transparent; logo + links adapt to the background) ---------- */
+  .site-header{
+    --logo-h:min(112px, 19vw);
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:18px var(--gutter);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:clamp(18px, 3vw, 40px);
+    background:transparent;box-shadow:none;
+    pointer-events:none;
+    transition:padding .35s ease;
+  }
+  .site-header > *{pointer-events:auto;}
+  .site-header.scrolled{--logo-h:min(44px, 14vw);padding-top:12px;padding-bottom:12px;}
+  .brand-logo{position:relative;display:block;flex:none;}
+  .brand-logo img{display:block;height:var(--logo-h);width:auto;transition:height .35s ease, opacity .35s ease;}
+  .brand-logo .ll{filter:drop-shadow(0 1px 8px rgba(0,0,0,.35));}
+  .brand-logo .ld{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;object-position:left center;opacity:0;}
+  .site-header.on-light .brand-logo .ld{opacity:1;}
+  .site-header.on-light .brand-logo .ll{opacity:0;}
+
+  .nav-links{display:flex;align-items:center;gap:clamp(18px, 2.4vw, 34px);}
+  .nav-links a{
+    font-size:.88rem;font-weight:600;color:#F7F4EC;
+    position:relative;padding-bottom:4px;
+    white-space:nowrap;
+    transition:color .3s ease;
+  }
+  .site-header.on-light .nav-links a, .site-header.on-light .header-utility, .site-header.on-light .header-linkedin{color:var(--navy);}
+  .site-header.on-light .menu-toggle span{background:var(--navy);}
+  .nav-links a::after{
+    content:'';position:absolute;left:0;bottom:0;height:1px;width:0;
+    background:currentColor;transition:width .3s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+
+  .header-right{display:flex;align-items:center;gap:clamp(14px, 2vw, 26px);flex:none;}
+  .header-utility{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:#F7F4EC;
+    white-space:nowrap;
+    transition:color .3s ease;
+  }
+
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:110;flex:none;}
+  .menu-toggle span{display:block;width:24px;height:2px;margin:5px 0;background:#F7F4EC;transition:.3s;}
+  .menu-toggle.open span{background:#F7F4EC !important;}
+  .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* Overlay backdrop behind the sliding mobile panel */
+  .mobile-nav-backdrop{
+    position:fixed;inset:0;z-index:104;
+    background:rgba(16,28,44,.4);
+    opacity:0;visibility:hidden;
+    transition:opacity .5s ease, visibility .5s ease;
+  }
+  .mobile-nav-backdrop.open{opacity:1;visibility:visible;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:flex-end;
+    overflow:hidden;
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    isolation:isolate;
+  }
+  .hero-video-wrap{position:absolute;inset:0;z-index:0;}
+  .hero-video-wrap video{
+    position:absolute;top:50%;left:50%;
+    min-width:100%;min-height:100%;width:auto;height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1.2s ease-in-out;
+  }
+  .hero-video-wrap video.bg-video-active{opacity:1;}
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(16,28,44,.55) 0%, rgba(27,46,68,.32) 38%, rgba(16,28,44,.85) 100%);
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    width:100%;
+    padding:180px var(--gutter) 90px;
+  }
+  .hero-inner .wrap{padding:0;max-width:calc(var(--max) - 0px);margin:0 auto;padding-left:0;padding-right:0;}
+  .hero-content{max-width:800px;}
+  .hero h1{
+    color:#F7F4EC;
+    font-size:clamp(2.1rem, 5.6vw, 4.4rem);
+    letter-spacing:-.005em;
+    line-height:1.06;
+    font-weight:400;
+  }
+  .hero h1 .line{
+    display:block;
+    opacity:0;
+    transform:translateY(28px);
+    animation:riseIn 1.1s cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  .hero h1 .line:nth-child(1){animation-delay:.25s;}
+  .hero h1 .line:nth-child(2){animation-delay:.55s;font-style:italic;font-weight:400;color:#D8C6A6;}
+  @keyframes riseIn{to{opacity:1;transform:translateY(0);}}
+
+  .hero-sub{
+    margin-top:28px;
+    max-width:560px;
+    color:rgba(247,244,236,.86);
+    font-size:1.06rem;
+    line-height:1.6;
+    opacity:0;
+    animation:riseIn 1.1s cubic-bezier(.22,.61,.36,1) forwards;
+    animation-delay:.85s;
+  }
+  .scroll-cue{
+    position:absolute;right:var(--gutter);bottom:34px;z-index:2;
+    display:flex;align-items:center;gap:10px;
+    color:rgba(247,244,236,.7);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+    opacity:0;
+    animation:riseIn 1s ease forwards;
+    animation-delay:1.3s;
+  }
+  .scroll-cue .stick{width:1px;height:34px;background:rgba(247,244,236,.5);position:relative;overflow:hidden;}
+  .scroll-cue .stick::after{
+    content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#F7F4EC;
+    animation:stickMove 2.2s ease-in-out infinite;
+  }
+  @keyframes stickMove{0%{top:-100%;}50%{top:100%;}100%{top:100%;}}
+
+  /* ---------- Rail / waypoint spine ---------- */
+  .rail-wrap{position:relative;}
+  .rail-line{
+    position:absolute;top:0;bottom:0;left:calc(var(--gutter) + var(--rail-x));
+    width:1px;
+    background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
+    z-index:0;
+  }
+  .block{position:relative;z-index:1;padding-top:96px;padding-bottom:96px;}
+  .block + .block{border-top:1px solid var(--line);}
+  .block .eyebrow .code{
+    position:relative;left:calc(-1 * (var(--gutter) - 4px));
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-delay-1{transition-delay:.08s;}
+  .reveal-delay-2{transition-delay:.16s;}
+  .reveal-delay-3{transition-delay:.24s;}
+  .reveal-delay-4{transition-delay:.32s;}
+  .reveal-delay-5{transition-delay:.4s;}
+  .reveal-delay-6{transition-delay:.48s;}
+
+  /* ---------- Section heading pattern ---------- */
+  .section-head{max-width:760px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.9rem, 3.4vw, 2.7rem);line-height:1.15;}
+  .section-head p{margin-top:20px;color:var(--ink-soft);font-size:1.02rem;max-width:640px;}
+
+  /* ---------- Intro ---------- */
+  .intro-text{max-width:820px;}
+  .intro-text h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem);line-height:1.2;}
+  .intro-text p{margin-top:24px;color:var(--ink-soft);font-size:1.08rem;max-width:680px;}
+
+  /* ---------- Pillars ---------- */
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .pillar{background:var(--bg);padding:44px 36px;transition:background .4s ease;}
+  .pillar:hover{background:var(--surface);}
+  .pillar-code{
+    font-family:'IBM Plex Mono', monospace;font-size:.75rem;letter-spacing:.12em;
+    color:var(--bronze);margin-bottom:22px;display:block;
+  }
+  .pillar h3{font-size:1.5rem;margin-bottom:14px;}
+  .pillar p{color:var(--ink-soft);font-size:.98rem;}
+
+  /* ---------- Capabilities ---------- */
+  .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .cap-card{
+    border-top:1px solid var(--navy);
+    padding-top:22px;
+  }
+  .cap-num{font-family:'IBM Plex Mono', monospace;font-size:.72rem;color:var(--ink-soft);letter-spacing:.1em;}
+  .cap-card h3{font-size:1.28rem;margin-top:14px;font-weight:500;}
+  .cap-card p{margin-top:12px;color:var(--ink-soft);font-size:.95rem;}
+  .cap-cta{margin-top:56px;}
+
+  /* ---------- Who we work with ---------- */
+  .who-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);}
+  .who-list li{
+    padding:22px 0;border-bottom:1px solid var(--line);
+    display:flex;align-items:baseline;gap:16px;
+    font-family:'Fraunces', serif;font-size:1.18rem;color:var(--navy);
+  }
+  .who-list li span.n{font-family:'IBM Plex Mono', monospace;font-size:.75rem;color:var(--bronze);}
+
+  /* ---------- Why ---------- */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .why-grid p{color:var(--ink-soft);font-size:1.04rem;}
+  .why-list li{
+    padding:16px 0;border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:14px;
+    font-size:.98rem;color:var(--ink);
+  }
+  .why-list li:last-child{border-bottom:1px solid var(--line);}
+  .why-list li::before{
+    content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex:none;
+  }
+
+  /* ---------- Bridge / Dubai ---------- */
+  .bridge{position:relative;overflow:hidden;}
+  .bridge-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+  .bridge-text p{margin-top:20px;color:var(--ink-soft);font-size:1.04rem;max-width:520px;}
+  .bridge-map{position:relative;height:340px;overflow:hidden;}
+  .bridge-map img{
+    width:100%;height:100%;object-fit:cover;
+    filter:saturate(.92);
+  }
+
+  /* ---------- News ---------- */
+  .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .news-card{border-top:1px solid var(--line);padding-top:20px;}
+  .news-cat{font-family:'IBM Plex Mono', monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+  .news-card h3{font-size:1.12rem;margin-top:12px;font-weight:500;line-height:1.35;}
+  .news-cta{margin-top:48px;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#F7F4EC;
+    padding:110px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .final-cta::before{
+    content:'';position:absolute;top:-40%;right:-10%;width:520px;height:520px;
+    border:1px solid rgba(247,244,236,.08);border-radius:50%;
+  }
+  .final-cta::after{
+    content:'';position:absolute;top:-20%;right:6%;width:340px;height:340px;
+    border:1px solid rgba(247,244,236,.08);border-radius:50%;
+  }
+  .final-cta-inner{max-width:640px;position:relative;z-index:1;}
+  .final-cta h2{color:#F7F4EC;font-size:clamp(2rem, 4vw, 3.1rem);line-height:1.15;}
+  .final-cta p{margin-top:22px;color:rgba(247,244,236,.78);font-size:1.05rem;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    padding:90px 0 30px;
+  }
+  .footer-video-wrap{position:absolute;inset:0;z-index:0;}
+  .footer-video-wrap video{
+    position:absolute;top:50%;left:50%;
+    min-width:100%;min-height:100%;width:auto;height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1.2s ease-in-out;
+  }
+  .footer-video-wrap video.bg-video-active{opacity:1;}
+  .footer-overlay{
+    position:absolute;inset:0;z-index:0;
+    background:transparent;
+  }
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(247,244,236,.16);}
+  .footer-brand p{margin-top:18px;color:rgba(247,244,236,.72);font-size:.95rem;max-width:320px;}
+  .footer-logo img{height:24px;filter:brightness(0) invert(1);}
+  .footer-col h4{
+    font-family:'IBM Plex Mono', monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+    color:rgba(247,244,236,.55);margin-bottom:18px;font-weight:500;
+  }
+  .footer-col li{padding:6px 0;}
+  .footer-col a{font-size:.92rem;color:#F7F4EC;transition:color .3s ease;}
+  .footer-col a:hover{color:var(--bronze);}
+  .footer-bottom{
+    padding-top:24px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:.8rem;color:rgba(247,244,236,.55);
+  }
+  .footer-bottom nav{display:flex;gap:22px;flex-wrap:wrap;}
+  .footer-bottom a:hover{color:var(--bronze);}
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;}
+
+  /* ---------- Responsive ---------- */
+
+  /* Sliding right-side panel — base rules apply from the point the
+     hamburger takes over, so the panel is ready before layout narrows further. */
+  .mobile-nav{
+    position:fixed;top:0;right:0;bottom:0;z-index:106;
+    width:min(84vw, 380px);
+    background:rgba(16,28,44,.94);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    display:flex;flex-direction:column;justify-content:center;gap:0;
+    padding:0 40px;
+    box-shadow:none;
+    transform:translateX(100%);
+    transition:transform .55s cubic-bezier(.22,.61,.36,1);
+  }
+  .mobile-nav.open{transform:translateX(0);box-shadow:-8px 0 40px rgba(16,28,44,.25);}
+  .mobile-nav a{
+    font-family:'Fraunces', serif;font-size:1.7rem;color:#F7F4EC;
+    padding:13px 0;border-bottom:1px solid rgba(247,244,236,.14);
+  }
+  .mobile-nav .btn{margin-top:28px;align-self:flex-start;}
+
+  @media (max-width:1180px){
+    .nav-links{gap:16px;}
+    .nav-links a{font-size:.82rem;}
+    .header-utility{display:none;}
+  }
+
+  @media (max-width:1024px){
+    .pillars-grid{grid-template-columns:1fr;background:transparent;border:none;gap:0;}
+    .pillar{padding:32px 0;}
+    .pillar + .pillar{border-top:1px solid var(--line);}
+    .cap-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:1fr;gap:36px;}
+    .bridge-grid{grid-template-columns:1fr;}
+    .bridge-map{height:300px;}
+    .news-grid{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+
+  @media (max-width:900px){
+    :root{--gutter:24px;}
+  }
+
+  @media (max-width:840px){
+    .nav-links{display:none;}
+    .header-right .btn{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  @media (max-width:760px){
+    .hero-inner{padding:150px var(--gutter) 70px;}
+    .scroll-cue{display:none;}
+    .rail-line{display:none;}
+    .block .eyebrow .code{left:0;}
+    .block{padding-top:64px;padding-bottom:64px;}
+    .bridge-map{height:220px;}
+    .cap-grid{grid-template-columns:1fr;}
+    .who-list{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;gap:36px;}
+    .final-cta{padding:80px 0;}
+
+  }
+
+  /* ======== ALMAREX phase-1 additions ======== */
+  .header-linkedin{display:inline-flex;align-items:center;gap:8px;color:#F7F4EC;font-size:.82rem;font-weight:600;transition:color .3s ease;}
+  .header-linkedin svg{width:18px;height:18px;fill:currentColor;}
+  .header-linkedin:hover{color:var(--bronze);}
+  .mobile-nav .mobile-linkedin{font-family:'Manrope',sans-serif;font-size:1rem;display:flex;align-items:center;gap:10px;}
+  .mobile-nav .mobile-linkedin svg{width:20px;height:20px;fill:currentColor;}
+
+  /* Services */
+  .cap-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+  .cap-tags li{
+    font-family:'IBM Plex Mono', monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--teal);background:var(--surface);border:1px solid var(--line);
+    padding:4px 9px;border-radius:20px;
+  }
+  .cap-card.accent{border-top:2px solid var(--bronze);margin-top:-1px;}
+  .cap-card.accent .cap-num{color:var(--bronze);}
+
+  /* Projects */
+  .proj-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:28px;}
+  .proj-card{grid-column:span 2;border-top:1px solid var(--line);padding-top:20px;}
+  .proj-card:nth-child(n+4){grid-column:span 3;}
+  .proj-card h3{font-size:1.18rem;margin-top:12px;font-weight:500;line-height:1.35;}
+  .proj-card p{margin-top:10px;color:var(--ink-soft);font-size:.93rem;}
+  .proj-note{margin-top:40px;font-size:.88rem;color:var(--ink-soft);}
+
+  /* Leadership */
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .lead-card{display:grid;grid-template-columns:132px 1fr;gap:24px;border-top:1px solid var(--navy);padding-top:22px;}
+  .lead-photo{width:132px;height:165px;object-fit:cover;background:var(--bg-soft);}
+  .lead-card h3{font-size:1.28rem;}
+  .lead-role{display:block;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+  .lead-card p{margin-top:14px;color:var(--ink-soft);font-size:.94rem;}
+
+  /* Contact (layout from reference file) */
+  .final-cta-inner{max-width:none;}
+  .final-cta h2 em{color:#D8C6A6;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:36px;}
+  .cm{margin-top:30px;}
+  .cm li{padding:13px 0;border-top:1px solid rgba(247,244,236,.16);display:flex;justify-content:space-between;gap:16px;font-size:.98rem;}
+  .cm li:last-child{border-bottom:1px solid rgba(247,244,236,.16);}
+  .cm li[hidden]{display:none;}
+  .cm span{color:rgba(247,244,236,.55);font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding-top:3px;}
+  .cm a:hover{color:var(--bronze);}
+  .legal{margin-top:22px;font-size:.82rem;color:rgba(247,244,236,.6);line-height:1.7;}
+  .cform input,.cform textarea{width:100%;background:none;border:0;border-bottom:1px solid rgba(247,244,236,.35);border-radius:0;color:#F7F4EC;font:inherit;padding:12px 0;margin-bottom:12px;outline:0;resize:vertical;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--bronze);}
+  .cform ::placeholder{color:rgba(247,244,236,.5);}
+  .pill{margin-top:14px;border:0;border-radius:999px;padding:14px 30px;background:#F7F4EC;color:var(--navy);font-weight:700;font-size:.92rem;cursor:pointer;transition:background .3s;}
+  .pill:hover{background:var(--bronze);}
+  .form-status{min-height:1.3em;margin-top:12px;font-size:.9rem;color:#D8C6A6;}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px;}}
+
+
+  /* Footer additions */
+  .footer-legal{margin-top:16px;font-size:.85rem;line-height:1.7;color:rgba(247,244,236,.6);}
+  .footer-col li.plain{font-size:.92rem;color:rgba(247,244,236,.85);}
+
+  @media (max-width:1024px){
+    .proj-grid{grid-template-columns:1fr 1fr;}
+    .proj-card, .proj-card:nth-child(n+4){grid-column:auto;}
+    .lead-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:760px){
+    .proj-grid{grid-template-columns:1fr;}
+    .lead-card{grid-template-columns:104px 1fr;gap:18px;}
+    .lead-photo{width:104px;height:130px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+    .hero h1 .line, .hero-sub, .scroll-cue{opacity:1;transform:none;}
+  }
+
+  /* ======== Stepped text layout (from reference file) on a normal scrolling page ======== */
+  .block{padding-top:96px;padding-bottom:96px;}
+  .block.cont{border-top:0;padding-top:0;}
+  .sx{width:min(100%,1360px);margin:0 auto;padding:0 var(--gutter);
+    display:grid;grid-template-columns:repeat(4,1fr);column-gap:1.2vw;row-gap:clamp(8px,1.6vh,18px);align-items:end;}
+  .sx-title{display:contents;}
+  .sx-lab{grid-column:1;grid-row:2;justify-self:end;white-space:nowrap;
+    font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:clamp(11px,1vw,15px);letter-spacing:.14em;text-transform:uppercase;
+    line-height:1;padding-bottom:.9em;color:var(--bronze);}
+  .sx-t{display:block;white-space:nowrap;font-family:'Fraunces',serif;font-weight:500;
+    font-size:calc(clamp(34px,5.4vw,96px)*var(--sxs,1));line-height:.98;letter-spacing:-.035em;color:var(--navy);}
+  .sx-t:nth-of-type(1){grid-column:1 / 4;grid-row:1;}
+  .sx-t:nth-of-type(2){grid-column:2 / -1;grid-row:2;}
+  .sx-t:nth-of-type(3){grid-column:3 / -1;grid-row:3;}
+  .sx-t--a{font-style:italic;font-weight:400;color:var(--teal);}
+  .sx-lead{grid-column:1 / 3;grid-row:3;align-self:end;max-width:44ch;font-size:clamp(15px,1.25vw,19px);line-height:1.45;color:var(--ink-soft);}
+  .sx-lead.wide{max-width:54ch;}
+  .sx-lead.l2{grid-column:2 / 4;grid-row:4;align-self:start;margin-top:clamp(10px,2vh,22px);}
+  .sx-rule{display:block;grid-column:1 / -1;grid-row:4;height:1px;margin-top:clamp(10px,2vh,22px);background:rgba(16,28,44,.3);
+    transform-origin:left center;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.22,.61,.36,1) .45s;}
+  .sx.in .sx-rule{transform:scaleX(1);}
+  .sx-list{display:contents;}
+  .sx-it{list-style:none;grid-row:5;align-self:start;padding-right:.8vw;font-size:clamp(14px,1.2vw,18px);line-height:1.35;font-weight:500;
+    margin-top:clamp(12px,2vh,22px);color:var(--navy);}
+  .sx-it i{font-style:normal;color:var(--bronze);margin-right:.35em;font-family:'IBM Plex Mono',monospace;font-size:.8em;}
+  .sx-it strong{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(17px,1.5vw,24px);line-height:1.2;display:block;margin-top:6px;}
+  .sx-it > span{display:block;margin-top:8px;font-size:.92rem;font-weight:400;color:var(--ink-soft);line-height:1.5;}
+  .sx-it .cap-tags{margin-top:12px;}
+  .sx-it:nth-child(1){grid-column:1;}
+  .sx-it:nth-child(2){grid-column:2;margin-top:calc(clamp(12px,2vh,22px) + clamp(22px,4.2vh,46px));}
+  .sx-it:nth-child(3){grid-column:3;margin-top:calc(clamp(12px,2vh,22px) + 2*clamp(22px,4.2vh,46px));}
+  .sx-it:nth-child(4){grid-column:4;margin-top:calc(clamp(12px,2vh,22px) + 3*clamp(22px,4.2vh,46px));}
+  .sx-note{grid-column:1 / -1;grid-row:6;margin-top:clamp(28px,4vh,48px);font-size:.88rem;color:var(--ink-soft);}
+  .sx-ph{margin:0;position:relative;grid-column:4;grid-row:1 / 4;align-self:end;justify-self:end;
+    width:clamp(150px,15vw,236px);aspect-ratio:4/5;}
+  .sx-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;border-radius:12px;display:block;box-shadow:0 18px 50px rgba(16,28,44,.22);}
+
+  /* reveal: label, title lines, lead, points arrive one after another */
+  .sx .rv{opacity:0;transform:translateY(26px);filter:blur(10px);
+    transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1),filter .9s cubic-bezier(.22,.61,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms);}
+  .sx.in .rv{opacity:1;transform:none;filter:none;}
+
+  @media (max-width:860px){
+    .sx{grid-template-columns:repeat(3,1fr);column-gap:6px;row-gap:8px;}
+    .sx-lab{grid-column:1 / -1;grid-row:1;justify-self:start;padding-bottom:.4em;}
+    .sx-t{font-size:calc(clamp(30px,10.2vw,60px)*var(--sxs,1));line-height:1;letter-spacing:-.03em;white-space:normal;text-wrap:balance;}
+    .sx-t:nth-of-type(1){grid-column:1 / -1;grid-row:2;}
+    .sx-t:nth-of-type(2){grid-column:1 / -1;grid-row:3;justify-self:end;}
+    .sx-t:nth-of-type(3){grid-column:2 / -1;grid-row:4;}
+    .sx-lead{grid-column:2 / -1;grid-row:5;align-self:start;margin-top:10px;font-size:clamp(14px,3.9vw,17px);max-width:none;}
+    .sx-lead.l2{grid-column:2 / -1;grid-row:6;margin-top:0;}
+    .sx-rule{grid-row:6;margin-top:6px;}
+    .sx-it{font-size:clamp(13px,3.5vw,16px);margin-top:0;padding-right:0;}
+    .sx-it:nth-child(1){grid-column:1 / 3;grid-row:7;margin-top:8px;}
+    .sx-it:nth-child(2){grid-column:2 / -1;grid-row:8;margin-top:0;}
+    .sx-it:nth-child(3){grid-column:1 / 3;grid-row:9;margin-top:0;}
+    .sx-it:nth-child(4){grid-column:2 / -1;grid-row:10;margin-top:0;}
+    .sx-note{grid-row:11;}
+    .sx-ph{grid-column:1;grid-row:4 / 6;align-self:start;justify-self:start;width:100%;max-width:130px;margin-top:6px;}
+    .sx-ph img{border-radius:10px;}
+  }
+
+  /* Dubai: full-size image row under the text */
+  .sx-wide{grid-column:1 / -1;grid-row:6;margin:clamp(44px,7vh,84px) 0 0;height:clamp(240px,36vw,500px);overflow:hidden;}
+  .sx-wide img{width:100%;height:100%;object-fit:cover;filter:saturate(.92);}
+  @media (max-width:860px){
+    .sx-wide{grid-row:12;height:240px;margin-top:36px;}
+  }
+
+  /* Leadership: portrait column + text column, mirrored for the second founder */
+  .lead-sx{grid-template-columns:minmax(230px,340px) 1fr;column-gap:clamp(40px,6vw,104px);align-items:center;}
+  .lead-sx.rev{grid-template-columns:1fr minmax(230px,340px);}
+  .lead-sx .sx-ph{grid-column:auto;grid-row:auto;width:100%;max-width:none;justify-self:stretch;align-self:center;margin:0;aspect-ratio:4/5;}
+  .lead-sx.rev .sx-ph{order:2;}
+  .lead-sx .sx-ph img{border-radius:14px;}
+  .lx-body{display:flex;flex-direction:column;align-items:flex-start;min-width:0;}
+  .lead-sx .sx-lab{margin:0 0 clamp(14px,2.2vh,22px);padding:0;justify-self:auto;}
+  .lead-sx .sx-title{display:block;margin:0;}
+  .lead-sx .sx-t{font-size:calc(clamp(32px,4.4vw,76px)*var(--sxs,1));}
+  .lead-sx .sx-t + .sx-t{margin-top:.04em;}
+  .lead-sx .sx-t:nth-of-type(2){margin-left:clamp(24px,4vw,64px);}
+  .lead-sx .sx-t:nth-of-type(3){margin-left:clamp(48px,8vw,128px);}
+  .lead-sx .sx-lead{margin:clamp(26px,4.2vh,44px) 0 0;max-width:40ch;align-self:flex-start;}
+  .lead-sx .sx-rule{width:100%;margin:clamp(26px,4vh,40px) 0 0;}
+  .lead-sx .sx-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(18px,2.4vw,36px);width:100%;}
+  .lead-sx .sx-it{grid-column:auto;grid-row:auto;margin-top:clamp(18px,2.8vh,28px);padding:0;}
+  .lead-sx .sx-it:nth-child(2){margin-top:calc(clamp(18px,2.8vh,28px) + clamp(14px,2.2vh,24px));}
+  .lead-sx .sx-it:nth-child(3){margin-top:calc(clamp(18px,2.8vh,28px) + 2*clamp(14px,2.2vh,24px));}
+  @media (max-width:860px){
+    .lead-sx,.lead-sx.rev{grid-template-columns:1fr;row-gap:28px;align-items:start;}
+    .lead-sx.rev .sx-ph{order:0;}
+    .lead-sx .sx-ph{max-width:240px;}
+    .lead-sx .sx-t{font-size:calc(clamp(30px,10vw,56px)*var(--sxs,1));white-space:normal;}
+    .lead-sx .sx-t:nth-of-type(2){margin-left:0;}
+    .lead-sx .sx-t:nth-of-type(3){margin-left:clamp(20px,8vw,48px);}
+    .lead-sx .sx-lead{max-width:none;margin-top:18px;font-size:clamp(14px,3.9vw,17px);}
+    .lead-sx .sx-list{grid-template-columns:1fr;}
+    .lead-sx .sx-it,.lead-sx .sx-it:nth-child(n){margin-top:14px;font-size:clamp(14px,3.8vw,16px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .sx .rv{opacity:1;transform:none;filter:none;}
+    .sx-rule{transform:scaleX(1);}
+  }
+</style>
+</head>
+<body>
+
+<!-- Inline SVG icons (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-form" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h14v17H5z M8.5 8.5h7 M8.5 12h7 M8.5 15.5h4"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="brand-logo" id="brandLogo" aria-label="ALMAREX: Home">
+    <img class="ll" src="https://i.postimg.cc/zv8g26m2/logo-almarex2-1.webp" alt="ALMAREX" fetchpriority="high" decoding="async">
+    <img class="ld" src="https://i.postimg.cc/WbDwghr6/logo-almarex.webp" alt="" decoding="async">
+  </a>
+
+  <nav class="nav-links" aria-label="Main">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#capabilities">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-right">
+    <!-- Shown only when CONFIG.linkedinUrl is set (see script) -->
+    <a class="header-linkedin" data-linkedin hidden target="_blank" rel="noopener" aria-label="ALMAREX on LinkedIn">
+      <svg aria-hidden="true"><use href="#i-in"/></svg><span>LinkedIn</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#capabilities">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#contact">Contact</a>
+  <a class="mobile-linkedin" data-linkedin hidden target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-video-wrap">
+    <video class="bg-video" muted playsinline preload="auto" autoplay
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero1.mp4"></video>
+    <video class="bg-video" muted playsinline preload="metadata"
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero2.mp4"></video>
+    <video class="bg-video" muted playsinline preload="metadata"
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/almarex-hero3.mp4"></video>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-content">
+        <h1>
+          <span class="line">Where Aviation</span>
+          <span class="line">Connects the World</span>
+        </h1>
+        <p class="hero-sub">ALMAREX AVIATION VENTURES FZCO is a Dubai-based international aviation business platform connecting airlines, airports, investors and governments across the Middle East, Europe, Central Asia and emerging markets: from airline representation and aircraft solutions to charter, cargo and aviation investments.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span class="stick"></span> Scroll</div>
+</section>
+
+<!-- ============ MAIN CONTENT / RAIL ============ -->
+<div class="rail-wrap">
+  <div class="rail-line" aria-hidden="true"></div>
+
+<section class="block" id="about"><div class="sx">
+  <span class="sx-lab rv">Who we are</span>
+  <h2 class="sx-title"><span class="sx-t rv">Aviation experience.</span><span class="sx-t rv">Commercial vision.</span><span class="sx-t rv sx-t--a">Global connections.</span></h2>
+  <p class="sx-lead rv wide">ALMAREX AVIATION VENTURES FZCO is a Dubai-based international aviation business platform delivering commercial, strategic and operational solutions across the global aviation industry. We partner with airlines, airports, governments, investors and logistics companies to unlock growth, develop new markets and execute complex aviation projects.</p>
+  <p class="sx-lead rv wide l2">Our approach combines decades of airline expertise with regional market intelligence and a global network of industry relationships.</p>
+</div></section>
+
+<section class="block" id="capabilities"><div class="sx">
+  <span class="sx-lab rv">Our services</span>
+  <h2 class="sx-title"><span class="sx-t rv">Six business lines.</span><span class="sx-t rv">One international</span><span class="sx-t rv sx-t--a">platform.</span></h2>
+  <p class="sx-lead rv">Every opportunity is different. ALMAREX assembles the right commercial, operational, financial and local-market expertise around each mandate.</p>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>01</i><strong>Airline Representation</strong><span>GSA / GSSA representation, commercial sales, marketing and market expansion for airlines.</span></li>
+    <li class="sx-it"><i>02</i><strong>Aircraft &amp; Fleet Solutions</strong><span>Aircraft transactions and flexible capacity for airlines and operators.</span><ul class="cap-tags"><li>Aircraft Acquisition</li><li>Aircraft Sales</li><li>Aircraft Sourcing</li><li>ACMI</li><li>Wet Lease</li><li>Dry Lease</li></ul></li>
+    <li class="sx-it"><i>03</i><strong>Passenger &amp; Cargo Charter</strong><span>Passenger and cargo charter programs (ad-hoc, series and long-term), structured and managed end to end.</span><ul class="cap-tags"><li>Passenger Charter</li><li>Cargo Charter</li></ul></li>
+  </ul>
+</div></section>
+
+<section class="block cont"><div class="sx">
+  <span class="sx-lab rv">Our services</span>
+  <h2 class="sx-title"><span class="sx-t rv">Cargo, advisory</span><span class="sx-t rv">and investment,</span><span class="sx-t rv sx-t--a">under one roof.</span></h2>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>04</i><strong>Cargo &amp; Logistics</strong><span>Cargo representation, air freight solutions, cargo network development and supply chain projects.</span></li>
+    <li class="sx-it"><i>05</i><strong>Aviation Advisory</strong><span>Airline start-ups, route and network development, commercial strategy, restructuring and transformation.</span></li>
+    <li class="sx-it"><i>06</i><strong>Investment &amp; Development</strong><span>Aviation investments, airport and FBO development, infrastructure projects and route incentive programs.</span></li>
+  </ul>
+</div></section>
+
+<section class="block"><div class="sx">
+  <span class="sx-lab rv">Featured industries</span>
+  <h2 class="sx-title"><span class="sx-t rv">Built to work</span><span class="sx-t rv">across the</span><span class="sx-t rv sx-t--a">ecosystem.</span></h2>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>+</i>Airlines and cargo airlines</li>
+    <li class="sx-it"><i>+</i>Airports and ground handlers</li>
+    <li class="sx-it"><i>+</i>Investors and financial institutions</li>
+    <li class="sx-it"><i>+</i>Governments, tourism boards and logistics providers</li>
+  </ul>
+</div></section>
+
+<section class="block" id="why"><div class="sx">
+  <span class="sx-lab rv">Why Almarex</span>
+  <h2 class="sx-title"><span class="sx-t rv">Why industry</span><span class="sx-t rv">leaders choose</span><span class="sx-t rv sx-t--a">Almarex.</span></h2>
+  <p class="sx-lead rv">We approach aviation as a system: demand, capacity, infrastructure, regulation, capital and partnerships must work together. Our role is to align those elements and keep the opportunity moving.</p>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>+</i>Dubai-based international platform</li>
+    <li class="sx-it"><i>+</i>Senior aviation executives</li>
+    <li class="sx-it"><i>+</i>Global airline relationships</li>
+    <li class="sx-it"><i>+</i>Commercial and operational expertise</li>
+  </ul>
+</div></section>
+
+<section class="block cont"><div class="sx">
+  <span class="sx-lab rv">Why Almarex</span>
+  <h2 class="sx-title"><span class="sx-t rv">Regional know-how,</span><span class="sx-t rv">one contact,</span><span class="sx-t rv sx-t--a">lasting ties.</span></h2>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>+</i>Proven regional market knowledge</li>
+    <li class="sx-it"><i>+</i>Flexible execution model</li>
+    <li class="sx-it"><i>+</i>One point of contact</li>
+    <li class="sx-it"><i>+</i>Long-term partnerships</li>
+  </ul>
+</div></section>
+
+<section class="block" id="bridge"><div class="sx">
+    <span class="sx-lab rv">Dubai to the world</span>
+  <h2 class="sx-title"><span class="sx-t rv">From Dubai</span><span class="sx-t rv">to the markets</span><span class="sx-t rv sx-t--a">that matter.</span></h2>
+  <p class="sx-lead rv wide">Dubai sits at the intersection of the Middle East, Europe, the Caucasus, Central Asia, India, Africa and North America. Almarex uses that vantage point to connect opportunity across fast-growing trade, travel and investment corridors.</p>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>+</i>Middle East and Europe</li>
+    <li class="sx-it"><i>+</i>Caucasus and Central Asia</li>
+    <li class="sx-it"><i>+</i>India and Africa</li>
+    <li class="sx-it"><i>+</i>North America</li>
+  </ul>
+  <figure class="sx-wide rv"><img src="https://i.postimg.cc/Y9kDdLZd/dubai.jpg" alt="Dubai: home base of ALMAREX connecting global markets" loading="lazy" decoding="async"></figure>
+</div></section>
+
+<section class="block" id="projects"><div class="sx">
+  <span class="sx-lab rv">Projects</span>
+  <h2 class="sx-title"><span class="sx-t rv">Project categories</span><span class="sx-t rv sx-t--a">we deliver.</span></h2>
+  <p class="sx-lead rv">The types of mandates we lead for airlines, operators, investors and governments.</p>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>Fleet</i><strong>Aircraft Acquisition &amp; Leasing</strong><span>Sourcing, acquisition and lease structuring for passenger and cargo aircraft.</span></li>
+    <li class="sx-it"><i>Cargo</i><strong>Cargo Charter Development</strong><span>Building and managing cargo charter programs and air freight capacity.</span></li>
+    <li class="sx-it"><i>Aviation</i><strong>Airline Market Entry</strong><span>Commercial entry strategy and representation for airlines launching in new markets.</span></li>
+  </ul>
+</div></section>
+
+<section class="block cont"><div class="sx">
+  <span class="sx-lab rv">Projects</span>
+  <h2 class="sx-title"><span class="sx-t rv">Start-ups, networks</span><span class="sx-t rv sx-t--a">and infrastructure.</span></h2>
+  <i class="sx-rule"></i>
+  <ul class="sx-list">
+    <li class="sx-it"><i>Aviation</i><strong>Airline Start-up &amp; Network Development</strong><span>From business concept and route planning to commercial launch and network growth.</span></li>
+    <li class="sx-it"><i>Development</i><strong>Airport &amp; Aviation Infrastructure</strong><span>Airport, FBO and infrastructure development, partnerships and route incentive programs.</span></li>
+  </ul>
+  <p class="sx-note rv">Client names are confidential. Project details are shared on request under NDA.</p>
+</div></section>
+
+<section class="block" id="leadership"><div class="sx lead-sx">
+  <figure class="sx-ph rv"><img src="https://i.postimg.cc/t4VcTQFb/FB-IMG-1792807615670.jpg" alt="Makar Petrosyan" loading="lazy" decoding="async"></figure>
+  <div class="lx-body">
+    <span class="sx-lab rv">Leadership</span>
+    <h2 class="sx-title"><span class="sx-t rv">Makar Petrosyan.</span><span class="sx-t rv sx-t--a">Co-Founder.</span></h2>
+    <p class="sx-lead rv">Entrepreneur with 22+ years of experience in business and marketing strategy, leading growth and international partnerships.</p>
+    <i class="sx-rule"></i>
+    <ul class="sx-list">
+      <li class="sx-it"><i>+</i>22+ years in business and marketing strategy</li>
+      <li class="sx-it"><i>+</i>Honorary Consul of Moldova since 2019</li>
+      <li class="sx-it"><i>+</i>Cross-border relationships and a strong network</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="block cont"><div class="sx lead-sx rev">
+  <figure class="sx-ph rv"><img src="https://i.postimg.cc/DzxP3nmF/1625803882294.jpg" alt="Paruyr Vardanyan" loading="lazy" decoding="async"></figure>
+  <div class="lx-body">
+    <span class="sx-lab rv">Leadership</span>
+    <h2 class="sx-title"><span class="sx-t rv">Paruyr Vardanyan.</span><span class="sx-t rv">Co-Founder &amp;</span><span class="sx-t rv sx-t--a">Director General.</span></h2>
+    <p class="sx-lead rv">Experienced manager with a proven track record in the airline and aviation industry.</p>
+    <i class="sx-rule"></i>
+    <ul class="sx-list">
+      <li class="sx-it"><i>+</i>Negotiation and budgeting</li>
+      <li class="sx-it"><i>+</i>Business planning and partnerships</li>
+      <li class="sx-it"><i>+</i>Operations management</li>
+    </ul>
+  </div>
+</div></section>
+
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="final-cta" id="contact">
+  <div class="wrap"><div class="final-cta-inner reveal">
+    <div class="eyebrow on-dark"><span class="code">CTA</span> Contact</div>
+    <h2>Ready to build the next aviation <em>opportunity</em>?</h2>
+    <div class="contact-grid">
+      <div>
+        <p>Whether launching a new airline, sourcing aircraft, developing charter and cargo programs or entering new markets, ALMAREX brings the experience, network and execution to make projects successful.</p>
+        <ul class="cm">
+          <li><span>WhatsApp</span><a href="https://wa.me/971585555050?text=Hello%20ALMAREX%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">+971 58 555 5050</a></li>
+          <li><span>Email</span><a href="mailto:ceo@almarex.ae">ceo@almarex.ae</a></li>
+          <li data-linkedin hidden><span>LinkedIn</span><a target="_blank" rel="noopener">ALMAREX on LinkedIn</a></li>
+        </ul>
+        <p class="legal">ALMAREX AVIATION VENTURES FZCO<br>Dubai Silicon Oasis, Dubai, UAE<br>License No. 91406</p>
+      </div>
+      <form class="cform" id="contactForm">
+        <input id="cf-name" name="name" type="text" placeholder="Name" aria-label="Name" required autocomplete="name">
+        <input id="cf-email" name="email" type="email" placeholder="Email" aria-label="Email" required autocomplete="email">
+        <input id="cf-company" name="company" type="text" placeholder="Company" aria-label="Company" autocomplete="organization">
+        <textarea id="cf-message" name="message" rows="4" placeholder="Message" aria-label="Message" required></textarea>
+        <button class="pill" type="submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-video-wrap" aria-hidden="true">
+    <video class="footer-bg-video" muted playsinline preload="none"
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/footer.mp4"></video>
+    <video class="footer-bg-video" muted playsinline preload="none"
+      src="https://raw.githubusercontent.com/Ramashery/Almarex/main/footer.mp4"></video>
+  </div>
+  <div class="footer-overlay"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="https://i.postimg.cc/WbDwghr6/logo-almarex.webp" alt="ALMAREX" loading="lazy" decoding="async"></div>
+        <p>ALMAREX AVIATION VENTURES FZCO is a Dubai-based international aviation business platform connecting strategy, markets, capacity, infrastructure and capital.</p>
+        <p class="footer-legal">Dubai Silicon Oasis, Dubai, UAE<br>License No. 91406</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#capabilities">Airline Representation</a></li>
+          <li><a href="#capabilities">Aircraft &amp; Fleet Solutions</a></li>
+          <li><a href="#capabilities">Passenger &amp; Cargo Charter</a></li>
+          <li><a href="#capabilities">Cargo &amp; Logistics</a></li>
+          <li><a href="#capabilities">Aviation Advisory</a></li>
+          <li><a href="#capabilities">Investment &amp; Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li class="plain">Dubai Silicon Oasis, Dubai, UAE</li>
+          <li class="plain">License No. 91406</li>
+          <li><a href="mailto:ceo@almarex.ae">ceo@almarex.ae</a></li>
+          <li><a href="tel:+971585555050">+971 58 555 5050</a></li>
+          <li><a href="https://wa.me/971585555050" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li data-linkedin hidden><a target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ALMAREX AVIATION VENTURES FZCO. All rights reserved.</span>
+      <nav>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookie Notice</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---- Site configuration (edit here) ---- */
+  var CONFIG = {
+    linkedinUrl: '',          // TODO: official LinkedIn company page URL. Empty = LinkedIn links stay hidden.
+    email: 'ceo@almarex.ae',
+    formEndpoint: ''          // Optional: POST endpoint (Formspree etc.). Empty = form opens the visitor's email app.
+  };
+
+  /* ---- Sticky header state ---- */
+  var header = document.getElementById('siteHeader');
+  var darkEls = [document.getElementById('top'), document.getElementById('contact'), document.querySelector('footer')];
+  function onScroll(){
+    header.classList.toggle('scrolled', window.scrollY > 40);
+    var P = Math.min(60, header.offsetHeight/2), onDark = false;
+    darkEls.forEach(function(el){ if(!el) return; var r = el.getBoundingClientRect(); if(r.top <= P && r.bottom >= P) onDark = true; });
+    header.classList.toggle('on-light', !onDark);
+  }
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---- LinkedIn: show only if a real URL is configured ---- */
+  if(CONFIG.linkedinUrl){
+    document.querySelectorAll('[data-linkedin]').forEach(function(el){
+      var a = el.tagName === 'A' ? el : el.querySelector('a');
+      if(a) a.href = CONFIG.linkedinUrl;
+      el.hidden = false;
+    });
+  }
+
+  /* ---- Mobile nav (right-side sliding panel) ---- */
+  var toggle = document.getElementById('menuToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  var backdrop = document.getElementById('mobileNavBackdrop');
+
+  function closeMenu(){
+    toggle.classList.remove('open');
+    mobileNav.classList.remove('open');
+    backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  function toggleMenu(){
+    var isOpen = toggle.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    backdrop.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', toggleMenu);
+  backdrop.addEventListener('click', closeMenu);
+  mobileNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+
+  /* ---- Reveal on scroll ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+
+  /* ---- Stepped text sections: stagger-in on scroll + fit titles to the width ---- */
+  var sxs = Array.prototype.slice.call(document.querySelectorAll('.sx'));
+  function fitSx(col){
+    col.style.setProperty('--sxs', 1);
+    var cs = getComputedStyle(col), cr = col.getBoundingClientRect();
+    var L = cr.left + parseFloat(cs.paddingLeft), R = cr.right - parseFloat(cs.paddingRight), min = 1;
+    var ph = col.querySelector('.sx-ph');
+    var lb = col.querySelector('.lx-body');
+    if(lb){ var lr = lb.getBoundingClientRect(); L = lr.left; R = lr.right; }
+    else if(ph && window.innerWidth > 860) R = ph.getBoundingClientRect().left - 14;
+    Array.prototype.forEach.call(col.querySelectorAll('.sx-t'), function(p){
+      var w = p.scrollWidth, js = getComputedStyle(p).justifySelf;
+      var avail = (js === 'end' || js === 'flex-end' || js === 'right') ? R - L : R - p.getBoundingClientRect().left;
+      if(w > avail && avail > 0) min = Math.min(min, avail / w);
+    });
+    col.style.setProperty('--sxs', min < 1 ? (min * .97).toFixed(3) : 1);
+  }
+  function fitAll(){ sxs.forEach(fitSx); }
+  sxs.forEach(function(col){
+    Array.prototype.forEach.call(col.querySelectorAll('.rv, .sx-it'), function(el, i){
+      el.style.setProperty('--i', i);
+      if(!el.classList.contains('rv')) el.classList.add('rv');
+    });
+  });
+  fitAll();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+  window.addEventListener('load', fitAll);
+  var fitT; window.addEventListener('resize', function(){ clearTimeout(fitT); fitT = setTimeout(fitAll, 120); });
+  if('IntersectionObserver' in window){
+    var sio = new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); sio.unobserve(en.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    sxs.forEach(function(el){ sio.observe(el); });
+  } else sxs.forEach(function(el){ el.classList.add('in'); });
+
+  /* ---- Background video crossfade slideshow (reusable, seamless — no pause) ---- */
+  function initCrossfade(selector){
+    var videos = Array.prototype.slice.call(document.querySelectorAll(selector));
+    if(!videos.length) return;
+    var FADE_DURATION = 1.2;
+    var currentIndex = 0;
+    var crossfading = false;
+
+    function startVideo(index){
+      var v = videos[index];
+      v.currentTime = 0;
+      v.classList.add('bg-video-active');
+      v.play().catch(function(){});
+    }
+
+    function crossfadeTo(nextIndex){
+      var current = videos[currentIndex];
+      var next = videos[nextIndex];
+      // Start the next video playing underneath while it fades in;
+      // the current video fades out on top of it at the same time,
+      // so there's no blank/paused gap between clips.
+      next.currentTime = 0;
+      next.play().catch(function(){});
+      next.classList.add('bg-video-active');
+      current.classList.remove('bg-video-active');
+      currentIndex = nextIndex;
+
+      setTimeout(function(){
+        current.pause();
+        crossfading = false;
+      }, FADE_DURATION * 1000);
+    }
+
+    videos.forEach(function(v, i){
+      v.addEventListener('timeupdate', function(){
+        if(i !== currentIndex || crossfading) return;
+        var timeLeft = v.duration - v.currentTime;
+        if(timeLeft <= FADE_DURATION && timeLeft > 0){
+          crossfading = true;
+          var nextIndex = (currentIndex + 1) % videos.length;
+          crossfadeTo(nextIndex);
+        }
+      });
+      // Safety net in case 'ended' fires before the timeupdate threshold
+      // (e.g. very short clips or rounding), so playback never stalls.
+      v.addEventListener('ended', function(){
+        if(i !== currentIndex || crossfading) return;
+        crossfading = true;
+        var nextIndex = (currentIndex + 1) % videos.length;
+        crossfadeTo(nextIndex);
+      });
+    });
+
+    startVideo(currentIndex);
+  }
+
+  initCrossfade('.hero-video-wrap .bg-video');
+
+  /* Footer video starts only when the footer is about to be seen (saves bandwidth) */
+  var footerEl = document.querySelector('footer');
+  if(footerEl && 'IntersectionObserver' in window){
+    var fio = new IntersectionObserver(function(es){
+      if(es[0].isIntersecting){
+        fio.disconnect();
+        document.querySelectorAll('.footer-bg-video').forEach(function(v){ v.preload = 'auto'; });
+        initCrossfade('.footer-video-wrap .footer-bg-video');
+      }
+    }, {rootMargin:'300px 0px'});
+    fio.observe(footerEl);
+  }
+
+  /* ---- Contact form ---- */
+  var form = document.getElementById('contactForm');
+  var statusEl = document.getElementById('formStatus');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.reportValidity()) return;
+      var d = {
+        name: form.name.value.trim(), email: form.email.value.trim(),
+        company: form.company.value.trim(), message: form.message.value.trim()
+      };
+      if(CONFIG.formEndpoint){
+        statusEl.textContent = 'Sending…';
+        fetch(CONFIG.formEndpoint, {
+          method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body: JSON.stringify(d)
+        }).then(function(r){
+          if(!r.ok) throw new Error('bad status');
+          form.reset();
+          statusEl.textContent = 'Thank you. Your message has been sent.';
+        }).catch(function(){
+          statusEl.textContent = 'Something went wrong. Please email ' + CONFIG.email + ' or use WhatsApp.';
+        });
+      } else {
+        var subject = 'Website enquiry from ' + d.name + (d.company ? ' (' + d.company + ')' : '');
+        var body = d.message + '\n\n— ' + d.name + (d.company ? '\n' + d.company : '') + '\n' + d.email;
+        window.location.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        statusEl.textContent = 'Opening your email app… if nothing happens, write to ' + CONFIG.email + '.';
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
